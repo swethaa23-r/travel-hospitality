@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Our Travel Heritage & Philosophy | Stackly</title>
+  <meta name="description" content="Learn about Stackly's dedication to curated luxury travel, sustainable exploration, and bespoke itinerary craftsmanship across the globe.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Fixed Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- Section 1: About Hero Section -->
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content" data-aos="fade-up">
+      <h1 class="page-header-title">About Stackly</h1>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs text-white-50"></i>
+        <span>About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Company Introduction -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-subtitle"><i class="fa-solid fa-compass"></i> Heritage of Elegance</span>
+          <h2 class="section-title">Redefining What It Means to Travel Wonderfully</h2>
+          <p class="lead text-muted">
+            Stackly was founded with a singular conviction: travel should never feel transactional; it should be transformative, poetic, and meticulously tailored.
+          </p>
+          <p class="text-muted">
+            For over a decade, we have connected international travelers with the planet's most extraordinary lands. We reject mass itineraries in favor of private villas, intimate wildlife encounters, and cultural conversations that leave lifelong impressions.
+          </p>
+          <div class="p-3 bg-warm-ivory rounded-3 border-start border-4 border-warning mt-4">
+            <p class="fst-italic text-dark mb-0">
+              "We measure our success not merely by destinations checked off a map, but by the stillness of moments that stay with you forever."
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=900&q=80" alt="Alpine Mountain Panorama" class="rounded-4 shadow-lg w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Our Travel Story -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="section-subtitle"><i class="fa-solid fa-book-bookmark"></i> Our Journey</span>
+          <h2 class="section-title">From Mountain Passes to Global Sanctuaries</h2>
+          <p class="text-muted">
+            What started in 2012 as a small group of alpine guides and cultural historians leading private expeditions through the Swiss Alps and Kyoto has blossomed into a globally revered luxury travel house.
+          </p>
+          <p class="text-muted">
+            Today, Stackly operates private destination hubs in Zurich, Denpasar, Athens, Male, and New York. Despite our global reach, our founding spirit remains unchanged: every traveler is an honored guest whose voyage deserves unrivaled artistry.
+          </p>
+          <div class="d-flex gap-4 mt-4">
+            <div>
+              <h3 class="display-6 fw-bold text-sunset-gold mb-0">98%</h3>
+              <span class="small text-muted">Client Satisfaction Rate</span>
+            </div>
+            <div class="border-start ps-4">
+              <h3 class="display-6 fw-bold text-primary-blue mb-0">14+</h3>
+              <span class="small text-muted">Years of Excellence</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=900&q=80" alt="Santorini Caldera" class="rounded-4 shadow-lg w-100">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Mission & Vision Cards -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 p-md-5 bg-warm-ivory rounded-4 h-100 border">
+            <div class="feature-icon-wrapper mb-3">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="text-primary-blue mb-3">Our Mission</h3>
+            <p class="text-muted">
+              To design bespoke, unhurried journeys that celebrate indigenous cultures, protect fragile natural ecosystems, and deliver effortless elegance to mindful global travelers.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 p-md-5 bg-warm-ivory rounded-4 h-100 border">
+            <div class="feature-icon-wrapper mb-3">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3 class="text-primary-blue mb-3">Our Vision</h3>
+            <p class="text-muted">
+              To be the world’s most trusted guardian of authentic luxury exploration—setting the gold standard for regenerative hospitality, cultural preservation, and personalized travel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Achievements & Statistics -->
+  <section class="section-padding bg-primary-blue text-white">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="display-5 fw-bold text-sunset-gold mb-1 stat-counter" data-target="94" data-suffix="+">0</h3>
+          <p class="text-white-50 mb-0">Handpicked Destinations</p>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="display-5 fw-bold text-sunset-gold mb-1 stat-counter" data-target="12500" data-suffix="+" data-comma="true">0</h3>
+          <p class="text-white-50 mb-0">Discerning Guests Hosted</p>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <h3 class="display-5 fw-bold text-sunset-gold mb-1 stat-counter" data-target="450" data-suffix="+">0</h3>
+          <p class="text-white-50 mb-0">5-Star Luxury Partners</p>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+          <h3 class="display-5 fw-bold text-sunset-gold mb-1 stat-counter" data-target="28" data-suffix="">0</h3>
+          <p class="text-white-50 mb-0">Global Travel Awards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Why Travelers Choose Us -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fa-solid fa-crown"></i> The Pillars</span>
+        <h2 class="section-title">The Stackly Difference</h2>
+        <p class="section-description">Our foundational commitments that guarantee each journey unfolds without compromise.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-gem"></i></div>
+            <h4 class="feature-title">Uncompromising Curation</h4>
+            <p class="feature-desc">We personally test each bed, inspect each kitchen, and vet each boat captain before recommending them to our travelers.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h4 class="feature-title">Intuitive Concierge</h4>
+            <p class="feature-desc">Your personal travel manager anticipates dining whims, adjusts transfers dynamically, and is always a text message away.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-leaf"></i></div>
+            <h4 class="feature-title">Regenerative Impact</h4>
+            <p class="feature-desc">5% of every voyage fee supports local coral restoration, cultural heritage apprenticeships, or alpine conservation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Travel Team Members -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fa-solid fa-people-group"></i> Master Curators</span>
+        <h2 class="section-title">Meet Our Leadership Team</h2>
+        <p class="section-description">Seasoned globetrotters, expedition leaders, and luxury sommeliers shaping your escapes.</p>
+      </div>
+
+                        <div class="row g-4">
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card text-center p-3 leadership-card">
+            <div class="leadership-img-wrapper position-relative overflow-hidden rounded-4 mb-3" style="cursor: pointer;" onclick="toggleLeadershipSocial(this, event)">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Victoria Vance" class="w-100 leadership-img" style="height: 250px; object-fit: cover;">
+              <div class="leadership-social-overlay d-flex align-items-center justify-content-center gap-2" onclick="event.stopPropagation();">
+                <a href="404.html" class="leadership-social-btn" aria-label="LinkedIn" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="X Twitter" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Instagram" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-instagram"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Email" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <h5 class="mb-1 text-primary-blue">Victoria Vance</h5>
+            <span class="text-sunset-gold small fw-bold d-block mb-2">Founder & Managing Director</span>
+            <p class="small text-muted mb-0">Former luxury hotelier with 18 years across St. Moritz and the Cyclades.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card text-center p-3 leadership-card">
+            <div class="leadership-img-wrapper position-relative overflow-hidden rounded-4 mb-3" style="cursor: pointer;" onclick="toggleLeadershipSocial(this, event)">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Marcus Vance" class="w-100 leadership-img" style="height: 250px; object-fit: cover;">
+              <div class="leadership-social-overlay d-flex align-items-center justify-content-center gap-2" onclick="event.stopPropagation();">
+                <a href="404.html" class="leadership-social-btn" aria-label="LinkedIn" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="X Twitter" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Instagram" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-instagram"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Email" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <h5 class="mb-1 text-primary-blue">Marcus Vance</h5>
+            <span class="text-sunset-gold small fw-bold d-block mb-2">Head of Alpine & Safaris</span>
+            <p class="small text-muted mb-0">Certified mountaineer who has led expeditions across 40 countries.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="wn-card text-center p-3 leadership-card">
+            <div class="leadership-img-wrapper position-relative overflow-hidden rounded-4 mb-3" style="cursor: pointer;" onclick="toggleLeadershipSocial(this, event)">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Elena Rostova" class="w-100 leadership-img" style="height: 250px; object-fit: cover;">
+              <div class="leadership-social-overlay d-flex align-items-center justify-content-center gap-2" onclick="event.stopPropagation();">
+                <a href="404.html" class="leadership-social-btn" aria-label="LinkedIn" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="X Twitter" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Instagram" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-instagram"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Email" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <h5 class="mb-1 text-primary-blue">Elena Rostova</h5>
+            <span class="text-sunset-gold small fw-bold d-block mb-2">Director of Cultural Experiences</span>
+            <p class="small text-muted mb-0">Art historian specializing in Asian heritage and Mediterranean antiquity.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="wn-card text-center p-3 leadership-card">
+            <div class="leadership-img-wrapper position-relative overflow-hidden rounded-4 mb-3" style="cursor: pointer;" onclick="toggleLeadershipSocial(this, event)">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Aria Chen" class="w-100 leadership-img" style="height: 250px; object-fit: cover;">
+              <div class="leadership-social-overlay d-flex align-items-center justify-content-center gap-2" onclick="event.stopPropagation();">
+                <a href="404.html" class="leadership-social-btn" aria-label="LinkedIn" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="X Twitter" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Instagram" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-brands fa-instagram"></i></a>
+                <a href="404.html" class="leadership-social-btn" aria-label="Email" onclick="event.stopPropagation(); window.location.href='404.html';"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <h5 class="mb-1 text-primary-blue">Aria Chen</h5>
+            <span class="text-sunset-gold small fw-bold d-block mb-2">Private Islands & Marine Lead</span>
+            <p class="small text-muted mb-0">Marine biologist curating zero-impact private reef and atoll retreats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Our Planning Process -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fa-solid fa-list-check"></i> Seamless Journey</span>
+        <h2 class="section-title">Our Travel Planning Process</h2>
+        <p class="section-description">How we take you effortlessly from initial dream to unforgettable reality.</p>
+      </div>
+
+      <!-- Process Pipeline with Sequenced Animation -->
+      <div class="process-sequence-wrapper position-relative" data-aos="fade-up">
+        <!-- Connecting Line between steps (Desktop) -->
+        <div class="process-track-line d-none d-lg-block">
+          <div class="process-track-fill"></div>
+        </div>
+
+        <div class="row g-4 position-relative" style="z-index: 2;">
+          <div class="col-lg-3 col-md-6 process-step-col" data-step="1">
+            <div class="process-step-card bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+              <div class="process-badge-wrapper mb-3">
+                <span class="badge bg-sunset-gold text-white fs-6 px-3 py-2 rounded-pill process-step-badge">Step 01</span>
+                <div class="process-pulse-ring"></div>
+              </div>
+              <div class="process-icon mb-3 text-sunset-gold fs-2">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <h5 class="text-primary-blue mb-2">In-Depth Consultation</h5>
+              <p class="small text-muted mb-0">We listen to your travel rhythm, culinary wishes, pacing, and party dynamics.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 process-step-col" data-step="2">
+            <div class="process-step-card bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+              <div class="process-badge-wrapper mb-3">
+                <span class="badge bg-sunset-gold text-white fs-6 px-3 py-2 rounded-pill process-step-badge">Step 02</span>
+                <div class="process-pulse-ring"></div>
+              </div>
+              <div class="process-icon mb-3 text-sunset-gold fs-2">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h5 class="text-primary-blue mb-2">Bespoke Curation</h5>
+              <p class="small text-muted mb-0">Our specialists handpick villas, exclusive private charters, and guided encounters.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 process-step-col" data-step="3">
+            <div class="process-step-card bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+              <div class="process-badge-wrapper mb-3">
+                <span class="badge bg-sunset-gold text-white fs-6 px-3 py-2 rounded-pill process-step-badge">Step 03</span>
+                <div class="process-pulse-ring"></div>
+              </div>
+              <div class="process-icon mb-3 text-sunset-gold fs-2">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+              <h5 class="text-primary-blue mb-2">Refinement & Lock-In</h5>
+              <p class="small text-muted mb-0">We adjust every nuance until your digital travel voucher and itinerary are flawless.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 process-step-col" data-step="4">
+            <div class="process-step-card bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+              <div class="process-badge-wrapper mb-3">
+                <span class="badge bg-sunset-gold text-white fs-6 px-3 py-2 rounded-pill process-step-badge">Step 04</span>
+                <div class="process-pulse-ring"></div>
+              </div>
+              <div class="process-icon mb-3 text-sunset-gold fs-2">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h5 class="text-primary-blue mb-2">24/7 Field Concierge</h5>
+              <p class="small text-muted mb-0">From airport meet-and-greets to last-minute reservations, you are fully cared for.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Section 8A: Global Accreditation & Honors -->
+  <section class="section-padding bg-white" id="accreditationsSection">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+          <i class="fa-solid fa-award me-1"></i> Industry Recognition
+        </span>
+        <h2 class="display-6 fw-bold text-primary-blue mb-3">Global Alliances & Accreditations</h2>
+        <p class="text-muted lead">Stackly operates in formal partnership with the world's highest arbiters of luxury hospitality and travel excellence.</p>
+      </div>
+            <div class="marquee-container" data-aos="fade-up">
+        <div class="marquee-track">
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-gem fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Virtuoso Luxury</span>
+            <small class="text-muted">Verified Member</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-star fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Forbes Travel</span>
+            <small class="text-muted">Five-Star Alliance</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-hotel fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Leading Hotels</span>
+            <small class="text-muted">Preferred Partner</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-utensils fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Relais & Châteaux</span>
+            <small class="text-muted">Gastronomy Club</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-plane-shield fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">IATA Certified</span>
+            <small class="text-muted">Global Aviation</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-leaf fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">GSTC Green</span>
+            <small class="text-muted">Sustainable Tourism</small>
+          </div>
+
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-gem fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Virtuoso Luxury</span>
+            <small class="text-muted">Verified Member</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-star fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Forbes Travel</span>
+            <small class="text-muted">Five-Star Alliance</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-hotel fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Leading Hotels</span>
+            <small class="text-muted">Preferred Partner</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-utensils fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">Relais & Châteaux</span>
+            <small class="text-muted">Gastronomy Club</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-plane-shield fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">IATA Certified</span>
+            <small class="text-muted">Global Aviation</small>
+          </div>
+          <div class="marquee-card p-4 bg-warm-ivory rounded-4 border d-flex flex-column align-items-center justify-content-center text-center">
+            <i class="fa-solid fa-leaf fa-2x text-sunset-gold mb-2"></i>
+            <span class="fw-bold text-primary-blue small">GSTC Green</span>
+            <small class="text-muted">Sustainable Tourism</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8B: Traveler Safety & Medical Concierge -->
+  <section class="section-padding bg-warm-ivory" id="travelerSafetySection">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-3">
+            <i class="fa-solid fa-shield-halved me-1"></i> Peace of Mind
+          </span>
+          <h2 class="display-6 fw-bold text-primary-blue mb-3">Comprehensive Traveler Care & Medical Concierge</h2>
+          <p class="text-muted lead mb-4">True luxury is traveling with the absolute confidence that every contingency is preemptively managed by international security and medical specialists.</p>
+          
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <div class="rounded-circle bg-white text-sunset-gold d-flex align-items-center justify-content-center shadow-sm flex-shrink-0" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold text-primary-blue mb-1">Global Medical Network (24/7 Access)</h6>
+              <p class="text-muted small mb-0">Instant tele-consultations with English-speaking medical doctors and direct dispatch of private hospital liaisons wherever you are.</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <div class="rounded-circle bg-white text-sunset-gold d-flex align-items-center justify-content-center shadow-sm flex-shrink-0" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-helicopter"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold text-primary-blue mb-1">Air Ambulance & Emergency Evacuation</h6>
+              <p class="text-muted small mb-0">Pre-arranged flight evacuation rights from remote private atolls or mountain peaks directly to tier-one tertiary medical centres.</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-3">
+            <div class="rounded-circle bg-white text-sunset-gold d-flex align-items-center justify-content-center shadow-sm flex-shrink-0" style="width: 44px; height: 44px;">
+              <i class="fa-solid fa-file-shield"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold text-primary-blue mb-1">Comprehensive High-Limit Coverage</h6>
+              <p class="text-muted small mb-0">Luggage tracking, private charter delays, missed departures, and medical coverage up to $5,000,000 per party.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 440px; object-fit: cover;" alt="Medical Concierge">
+            <div class="bg-white p-4 rounded-4 shadow position-absolute bottom-0 start-0 m-4 d-none d-sm-block border" style="max-width: 320px;">
+              <div class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-heart-pulse text-danger fa-2x"></i>
+                <div>
+                  <div class="fw-bold text-primary-blue">Average Response</div>
+                  <div class="text-sunset-gold fw-bold fs-5">Under 90 Seconds</div>
+                  <small class="text-muted">Direct to medical specialist</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Call to Action -->
+  <section class="cta-section">
+    <div class="container position-relative" style="z-index: 2;" data-aos="zoom-in">
+      <h2 class="cta-title">Ready to Begin Your Bespoke Journey?</h2>
+      <p class="cta-desc">Speak with our private travel designers today and let us bring your vision to life.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="booking.html" class="btn btn-primary-wn btn-lg px-4"><i class="fa-solid fa-calendar-check"></i> Plan Your Trip</a>
+        <a href="contact.html" class="btn btn-white-wn btn-lg px-4"><i class="fa-solid fa-envelope"></i> Contact Concierge</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="404.html">Amalfi Coast</a></li>
+            <li><a href="404.html">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">+91 90909 09090</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">info@stackly.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-white-50">FAQs</a>
+          <a href="404.html" class="text-white-50">Privacy Policy</a>
+          <a href="404.html" class="text-white-50">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function toggleLeadershipSocial(el, event) {
+      if (event) {
+        event.stopPropagation();
+        if (event.target.closest('.leadership-social-btn')) {
+          return;
+        }
+      }
+      var wrapper = el.classList.contains('leadership-img-wrapper') ? el : el.closest('.leadership-img-wrapper');
+      if (!wrapper) return;
+      var wasOpen = wrapper.classList.contains('show-social');
+      
+      document.querySelectorAll('.leadership-img-wrapper').forEach(function(w) {
+        w.classList.remove('show-social', 'active');
+      });
+      
+      if (!wasOpen) {
+        wrapper.classList.add('show-social', 'active');
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.leadership-img-wrapper')) {
+        document.querySelectorAll('.leadership-img-wrapper').forEach(function(w) {
+          w.classList.remove('show-social', 'active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

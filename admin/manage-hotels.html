@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Hotels & Resorts — Stackly Admin</title>
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin-layout">
+
+  <!-- Admin Sidebar (Strictly Internal Navigation) -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <div class="admin-brand-left">
+        <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img dashboard-sidebar-logo">
+        <span class="admin-badge">Admin</span>
+      </div>
+      <button type="button" class="admin-sidebar-close" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html" class="admin-nav-item">
+        <i class="fa-solid fa-gauge-high"></i> Dashboard
+      </a>
+      <a href="manage-bookings.html" class="admin-nav-item">
+        <i class="fa-solid fa-calendar-check"></i> Bookings
+      </a>
+      <a href="manage-destinations.html" class="admin-nav-item">
+        <i class="fa-solid fa-map-location-dot"></i> Destinations
+      </a>
+      <a href="manage-packages.html" class="admin-nav-item">
+        <i class="fa-solid fa-suitcase"></i> Tour Packages
+      </a>
+      <a href="manage-hotels.html" class="admin-nav-item active">
+        <i class="fa-solid fa-hotel"></i> Hotels & Resorts
+      </a>
+      <a href="manage-users.html" class="admin-nav-item">
+        <i class="fa-solid fa-users"></i> Customers
+      </a>
+      <a href="manage-reviews.html" class="admin-nav-item">
+        <i class="fa-solid fa-star-half-stroke"></i> Reviews
+      </a>
+    </nav>
+
+    <div class="p-3 border-top border-secondary border-opacity-25 mt-auto">
+      <a href="../login.html" class="admin-nav-item text-danger mt-1">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Admin Main -->
+  <main class="admin-main">
+    <!-- Topbar (Mobile: Logo + 3-line Hamburger only | Desktop: Search bar + Bell + Swetha Ramesh Profile Icon with Email & Password) -->
+    <header class="admin-topbar">
+      <!-- Mobile View (Logo + Hamburger only) -->
+      <div class="dashboard-mobile-header d-lg-none">
+        <a href="admin-dashboard.html" class="dashboard-mobile-logo">
+          <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img">
+          <span class="admin-badge">Admin</span>
+        </a>
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop View (Search + Bell + Profile Icon) -->
+      <div class="dashboard-desktop-header d-none d-lg-flex">
+        <!-- Search bar with Search Icon -->
+        <form class="dashboard-search-bar dashboard-search-form" id="dashboardSearchForm">
+          <button type="submit" class="border-0 bg-transparent p-0 text-muted" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+          <input type="text" placeholder="Search partner hotels, villas, chalets, amenities...">
+        </form>
+
+        <!-- Right Side: Bell Icon + Profile -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Notification Bell Icon (Redirects to 404 on click) -->
+          <button class="dashboard-notif-btn" type="button" title="System Alerts">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- Profile in Top Right Corner (Icon only, No Image, Swetha Ramesh, Email & Password display) -->
+          <div class="dropdown">
+            <button class="dashboard-header-profile dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="dashboard-avatar-icon">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="dashboard-profile-text text-start">
+                <div class="profile-name">Swetha Ramesh</div>
+                <div class="profile-email">swetha.admin@stackly.com</div>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-3 profile-dropdown-menu" style="min-width: 310px;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom">
+                <div class="dashboard-avatar-icon large">
+                  <i class="fa-solid fa-circle-user fa-2x text-primary-blue"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold profile-name">Swetha Ramesh</h6>
+                  <span class="small text-muted profile-email">swetha.admin@stackly.com</span>
+                  <span class="badge bg-warning text-dark d-inline-block mt-1">Super Administrator</span>
+                </div>
+              </div>
+
+              <!-- Display Credentials (Email & Password) -->
+              <div class="mb-3 bg-light p-2 rounded border small">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted"><i class="fa-solid fa-envelope me-1"></i> Email ID:</span>
+                  <strong class="text-dark profile-email">swetha.admin@stackly.com</strong>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted"><i class="fa-solid fa-lock me-1"></i> Password:</span>
+                  <span class="badge bg-secondary-subtle text-dark border font-monospace">••••••••••••</span>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="manage-users.html" class="btn btn-sm btn-outline-wn">
+                  <i class="fa-solid fa-user-gear me-1"></i> Account Settings
+                </a>
+                <a href="../login.html" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Properties Header & Summary Metrics -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h3 class="fw-bold text-primary-blue mb-1">Partner Hotels & Luxury Resorts</h3>
+          <p class="text-muted mb-0">Maintain verified private chalets, overwater retreats, and palace suites.</p>
+        </div>
+        <div>
+          <button class="btn btn-primary-wn btn-sm-wn">
+            <i class="fa-solid fa-plus"></i> Add New Property
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Listed Resorts</span>
+            <h4 class="fw-bold text-primary-blue mb-0">4 Five-Star</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Average Rack Rate</span>
+            <h4 class="fw-bold text-success mb-0">$1,350 / night</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Audit Score</span>
+            <h4 class="fw-bold text-primary-blue mb-0">99.4% Pass</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Guest Satisfaction</span>
+            <h4 class="fw-bold text-warning mb-0">4.95 / 5.0 ★</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Hotels Table -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="table-responsive-wn">
+        <table class="table admin-table align-middle mb-0">
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Property Name</th>
+              <th>Star Tier</th>
+              <th>Nightly Rate</th>
+              <th>Guest Rating</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="adminHotelsTableBody">
+            <!-- Rendered via js/admin-dashboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Hospitality Compliance & Five-Star Safety Audits -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-award text-sunset-gold me-2"></i>Hospitality Quality Certification & Safety Audits</h5>
+          <small class="text-muted">Quarterly inspection compliance and hygiene ratings for accredited properties.</small>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-wn"><i class="fa-solid fa-file-circle-check me-1"></i> Run Bulk Audit</button>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">5-Star Accreditation</span>
+            <h4 class="fw-bold text-primary-blue my-1">100%</h4>
+            <div class="small text-success"><i class="fa-solid fa-check-circle me-1"></i> All properties verified</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Eco-Luxury Certified</span>
+            <h4 class="fw-bold text-success my-1">4 of 4</h4>
+            <div class="small text-muted">Zero single-use plastics</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Butler Service SLA</span>
+            <h4 class="fw-bold text-primary-blue my-1">99.8%</h4>
+            <div class="small text-muted">&lt; 3 min response guarantee</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Health & Safety Score</span>
+            <h4 class="fw-bold text-success my-1">99.4 / 100</h4>
+            <div class="small text-muted">Bureau Veritas certified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Luxury Villa Inventory & Allocation Health -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="dashboard-card-header">
+        <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-door-open text-primary-blue me-2"></i>Room Category Allocations & Inventory Health</h5>
+        <small class="text-muted">Real-time availability of private overwater villas, mountain chalets, and penthouse suites.</small>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="badge bg-success text-white mb-2">92% Occupied</span>
+            <h6 class="fw-bold text-primary-blue mb-1">Overwater Water Retreats (Maldives)</h6>
+            <p class="small text-muted mb-0">12 of 14 suites active with confirmed VIP guests through January 2027.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="badge bg-info text-white mb-2">88% Occupied</span>
+            <h6 class="fw-bold text-primary-blue mb-1">Ski-In Alpine Chalets (Switzerland)</h6>
+            <p class="small text-muted mb-0">8 of 9 private chalets locked for ski season high-roller bookings.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="badge bg-warning text-dark mb-2">85% Occupied</span>
+            <h6 class="fw-bold text-primary-blue mb-1">Caldera Cliffside Suites (Santorini)</h6>
+            <p class="small text-muted mb-0">17 of 20 suites confirmed for shoulder spring arrivals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: New Hotel Affiliation Application Form -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border">
+      <div class="mb-3">
+        <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-hotel text-primary-blue me-2"></i>New Luxury Resort Partnership Affiliation</h5>
+        <small class="text-muted">Submit prospective five-star villas and palace hotels for Stackly portfolio screening.</small>
+      </div>
+
+      <form id="hotelAffiliationForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Property Legal Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. Royal Mansour Marrakech" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Location & Country <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. Marrakech, Morocco" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Star Rating Tier <span class="text-danger">*</span></label>
+            <select class="form-select" required>
+              <option value="">Select Star Category...</option>
+              <option value="5-star-superior">5-Star Superior Luxury</option>
+              <option value="5-star-palace">Official Palace / Ultra-Luxury</option>
+              <option value="private-island">Private Island Exclusive</option>
+              <option value="chalet">Alpine Luxury Chalet</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">General Manager / Contact Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" placeholder="gm@luxuryhotel.com" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Starting Nightly Rack Rate ($) <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" placeholder="e.g. 1200" min="200" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Available Room Keys <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" placeholder="e.g. 24" min="1" required>
+          </div>
+
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary-wn px-4">
+              <i class="fa-solid fa-paper-plane me-1"></i> Submit Partnership Application
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+  <script src="../js/dashboard-common.js"></script>
+</body>
+</html>

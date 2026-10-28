@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Curated Luxury Travel, Resorts & Unforgettable Journeys</title>
+  <meta name="description" content="Discover bespoke holiday packages, private island resorts, and transformative travel experiences with Stackly. Explore our hand-crafted luxury destinations.">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Stackly — Luxury Travel & Hospitality Platform">
+  <meta property="og:description" content="Hand-crafted travel itineraries, luxury villas, and unforgettable destinations.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Section 1: Fixed Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- Section 2: Animated Hero Section -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="hero-badge badge-pulse">
+            <i class="fa-solid fa-crown text-warning"></i>
+            <span>Curated International Luxury Escapes</span>
+          </div>
+          <h1 class="hero-title cinema-title">
+            Discover the World, <br><span>One Journey</span> at a Time.
+          </h1>
+          <p class="hero-description">
+            Experience hand-crafted bespoke itineraries, private island sanctuaries, and Michelin-starred hospitality tailored to discerning travelers across all seven continents.
+          </p>
+          <div class="hero-cta-group d-flex flex-wrap gap-3 mb-4">
+            <a href="404.html" class="btn btn-primary-wn btn-lg px-4">
+              <i class="fa-solid fa-compass"></i> Explore Destinations
+            </a>
+            <a href="404.html" class="btn btn-white-wn btn-lg px-4">
+              <i class="fa-solid fa-calendar-check"></i> Plan Your Trip
+            </a>
+          </div>
+
+          <!-- Customer Ratings Indicator -->
+          <div class="d-flex align-items-center gap-3 pt-2">
+            <div class="d-flex text-sunset-gold">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-white-50 small">
+              <strong class="text-white">4.97 / 5.0</strong> from over 3,400+ verified luxury travelers
+            </span>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="hero-stats-card animate-float">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="stat-widget-icon bg-sunset-gold text-white" style="width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+                <i class="fa-solid fa-earth-americas"></i>
+              </div>
+              <div>
+                <span class="hero-stat-number d-block text-white fs-3">94+</span>
+                <span class="hero-stat-label text-white-50">Global Destinations</span>
+              </div>
+            </div>
+            <hr class="border-light opacity-25 my-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="stat-widget-icon bg-white text-primary-blue" style="width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <div>
+                <span class="hero-stat-number d-block text-sunset-gold fs-3">100%</span>
+                <span class="hero-stat-label text-white-50">Verified 5-Star Partners</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Advanced Travel Search -->
+  <div class="container search-panel-wrapper">
+    <div class="search-panel" data-aos="fade-up">
+      <form id="heroSearchForm" class="row g-3 align-items-end">
+        <div class="col-lg-3 col-md-6 search-field">
+          <label for="searchDestination">
+            <i class="fa-solid fa-location-dot"></i> Destination
+          </label>
+          <select id="searchDestination" class="form-select">
+            <option value="" selected>Where would you like to go?</option>
+            <option value="Bali">Bali, Indonesia</option>
+            <option value="Swiss Alps">Swiss Alps, Switzerland</option>
+            <option value="Santorini">Santorini, Greece</option>
+            <option value="Maldives">Maldives, Indian Ocean</option>
+            <option value="Kyoto">Kyoto, Japan</option>
+            <option value="Kerala">Kerala, India</option>
+            <option value="Amalfi Coast">Amalfi Coast, Italy</option>
+            <option value="Serengeti">Serengeti, Tanzania</option>
+          </select>
+        </div>
+
+        <div class="col-lg-2 col-md-6 search-field">
+          <label for="searchCategory">
+            <i class="fa-solid fa-layer-group"></i> Category
+          </label>
+          <select id="searchCategory" class="form-select">
+            <option value="" selected>All Styles</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Beach Holidays">Beach Holidays</option>
+            <option value="Luxury Travel">Luxury Travel</option>
+            <option value="Family Vacations">Family Vacations</option>
+            <option value="Honeymoon">Honeymoon</option>
+            <option value="Cultural Tours">Cultural Tours</option>
+          </select>
+        </div>
+
+        <div class="col-lg-2 col-md-6 search-field">
+          <label for="searchCheckIn">
+            <i class="fa-solid fa-calendar-day"></i> Check-in
+          </label>
+          <input type="text" id="searchCheckIn" class="form-control flatpickr-date" placeholder="Select date">
+        </div>
+
+        <div class="col-lg-2 col-md-6 search-field">
+          <label for="searchTravelers">
+            <i class="fa-solid fa-user-group"></i> Travelers
+          </label>
+          <select id="searchTravelers" class="form-select">
+            <option value="1">1 Traveler</option>
+            <option value="2" selected>2 Travelers</option>
+            <option value="3">3 Travelers</option>
+            <option value="4">4+ Travelers</option>
+          </select>
+        </div>
+
+        <div class="col-lg-3 col-md-12">
+          <button type="submit" class="btn btn-primary-wn w-100 py-2">
+            <i class="fa-solid fa-magnifying-glass"></i> Search Experiences
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Section 4: Popular Destinations -->
+  <section class="section-padding bg-warm-ivory" id="popularDestinations">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-earth-americas"></i> Iconic Gateways
+        </span>
+        <h2 class="section-title cinema-title">Popular Destinations</h2>
+        <p class="section-description">
+          From tranquil Balinese temples and sun-drenched Cycladic cliffs to pristine alpine ridges, explore the most sought-after holiday regions on the planet.
+        </p>
+      </div>
+
+      <div class="row g-4" id="homeDestinationsGrid">
+        <!-- Rendered by JS or static fallback below -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali, Indonesia" loading="lazy">
+              <span class="card-badge gold"><i class="fa-solid fa-fire me-1"></i> Trending</span>
+              <button class="wishlist-btn" data-id="dest-bali" aria-label="Save Bali to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Indonesia &bull; Southeast Asia</span>
+              </div>
+              <h3 class="card-title"><a href="404.html">Bali</a></h3>
+              <p class="text-muted small mb-3">Emerald terraced rice paddies, sacred clifftop temples, and turquoise ocean lagoons.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="fw-bold text-dark">4.90</span>
+                  <span class="text-muted">(342)</span>
+                </div>
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-route"></i>
+                  <span>48 Experiences</span>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value">$899</span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Swiss Alps, Switzerland" loading="lazy">
+              <span class="card-badge">Adventure</span>
+              <button class="wishlist-btn" data-id="dest-swiss-alps" aria-label="Save Swiss Alps to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Switzerland &bull; Europe</span>
+              </div>
+              <h3 class="card-title"><a href="404.html">Swiss Alps</a></h3>
+              <p class="text-muted small mb-3">Majestic Matterhorn views, panoramic Glacier Express trains, and boutique timber chalets.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="fw-bold text-dark">4.95</span>
+                  <span class="text-muted">(289)</span>
+                </div>
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-route"></i>
+                  <span>36 Experiences</span>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value">$1,850</span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80" alt="Santorini, Greece" loading="lazy">
+              <span class="card-badge gold">Honeymoon</span>
+              <button class="wishlist-btn" data-id="dest-santorini" aria-label="Save Santorini to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Greece &bull; Europe</span>
+              </div>
+              <h3 class="card-title"><a href="404.html">Santorini</a></h3>
+              <p class="text-muted small mb-3">Cobalt blue domes, whitewashed cliffside suites, and romantic golden Aegean sunsets.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="fw-bold text-dark">4.92</span>
+                  <span class="text-muted">(412)</span>
+                </div>
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-route"></i>
+                  <span>42 Experiences</span>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value">$1,450</span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives Atolls" loading="lazy">
+              <span class="card-badge gold">Luxury Travel</span>
+              <button class="wishlist-btn" data-id="dest-maldives" aria-label="Save Maldives to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Maldives &bull; Indian Ocean</span>
+              </div>
+              <h3 class="card-title"><a href="404.html">Maldives</a></h3>
+              <p class="text-muted small mb-3">Exclusive overwater bungalows, translucent coral reefs, and submerged fine dining.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="fw-bold text-dark">4.98</span>
+                  <span class="text-muted">(520)</span>
+                </div>
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-route"></i>
+                  <span>29 Experiences</span>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value">$2,400</span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Kyoto, Japan" loading="lazy">
+              <span class="card-badge">Cultural Tours</span>
+              <button class="wishlist-btn" data-id="dest-kyoto" aria-label="Save Kyoto to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Japan &bull; East Asia</span>
+              </div>
+              <h3 class="card-title"><a href="404.html">Kyoto</a></h3>
+              <p class="text-muted small mb-3">Centuries-old Shinto shrines, meditative Zen rock gardens, and Kaiseki culinary art.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="fw-bold text-dark">4.88</span>
+                  <span class="text-muted">(310)</span>
+                </div>
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-route"></i>
+                  <span>54 Experiences</span>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value">$1,350</span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80" alt="Kerala, India" loading="lazy">
+              <span class="card-badge">Family Vacations</span>
+              <button class="wishlist-btn" data-id="dest-kerala" aria-label="Save Kerala to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>India &bull; South Asia</span>
+              </div>
+              <h3 class="card-title"><a href="404.html">Kerala</a></h3>
+              <p class="text-muted small mb-3">Palm-fringed backwaters, luxury houseboat journeys, spice plantations, and Ayurvedic healing.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <span class="fw-bold text-dark">4.85</span>
+                  <span class="text-muted">(265)</span>
+                </div>
+                <div class="card-meta-item">
+                  <i class="fa-solid fa-route"></i>
+                  <span>38 Experiences</span>
+                </div>
+              </div>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value">$750</span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Explore <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="404.html" class="btn btn-primary-wn px-4">
+          <i class="fa-solid fa-globe"></i> View All 94+ Destinations
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Why Choose Us? -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-award"></i> The Stackly Distinction
+        </span>
+        <h2 class="section-title cinema-title">Why Discerning Travelers Choose Us</h2>
+        <p class="section-description">
+          Uncompromising standards, white-glove concierge attention, and deep local partnerships define every journey we curate.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3 class="feature-title">Personalized Travel Planning</h3>
+            <p class="feature-desc">Every itinerary is hand-tailored by our regional destination specialists to align with your personal cadence, culinary taste, and passions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-hotel"></i>
+            </div>
+            <h3 class="feature-title">Verified Hotels & Resorts</h3>
+            <p class="feature-desc">We personally inspect and partner with only five-star resorts, private villas, and heritage chalets that meet our rigorous hospitality benchmarks.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="feature-title">Experienced Local Guides</h3>
+            <p class="feature-desc">Explore with certified historians, naturalist trackers, and insider locals who open doors to secret gardens, private cellars, and sacred sights.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="feature-title">Secure Booking Experience</h3>
+            <p class="feature-desc">Transparent billing, encrypted reservations, and verified deposit custody provide complete financial peace of mind from inquiry to departure.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3 class="feature-title">24/7 Concierge Assistance</h3>
+            <p class="feature-desc">Whether you require last-minute yacht reservations, flight adjustments, or private medical guidance, your dedicated travel manager is always on call.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <h3 class="feature-title">Flexible Holiday Packages</h3>
+            <p class="feature-desc">Enjoy penalty-free date adjustments, customizable private excursions, and flexible payment plans designed around your evolving schedule.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Featured Tour Packages -->
+  <section class="section-padding bg-warm-ivory" id="featuredPackages">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-suitcase"></i> All-Inclusive Journeys
+        </span>
+        <h2 class="section-title cinema-title">Featured Tour Packages</h2>
+        <p class="section-description">
+          Carefully orchestrated multi-day itineraries combining luxury stays, VIP private transport, and once-in-a-lifetime guided excursions.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Package 1: Bali -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali Island Paradise" loading="lazy">
+              <span class="card-badge gold">Popular Choice</span>
+              <button class="wishlist-btn" data-id="pkg-bali-paradise" aria-label="Save Bali Package to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bali, Indonesia</span>
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Bali Island Paradise & Cultural Awakening</a>
+              </h3>
+              <div class="card-meta-list">
+                <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</div>
+                <div class="card-meta-item"><i class="fa-solid fa-users"></i> Max 12</div>
+                <div class="card-meta-item"><i class="fa-solid fa-star text-warning"></i> 4.90 (184)</div>
+              </div>
+              <p class="text-muted small mb-3">Private pool villas, Batur volcanic sunrise trek, Tirta Empul purification, and Jimbaran sunset dinner.</p>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Price per person</span>
+                  <span class="card-price-value">$1,199</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Details</a>
+                  <a href="404.html" class="btn btn-primary-wn btn-sm-wn">Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2: Swiss Alps -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Swiss Alpine Grandeur" loading="lazy">
+              <span class="card-badge gold">Luxury Signature</span>
+              <button class="wishlist-btn" data-id="pkg-swiss-alpine" aria-label="Save Swiss Package to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Swiss Alps, Switzerland</span>
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Swiss Alpine Grandeur & Glacier Express</a>
+              </h3>
+              <div class="card-meta-list">
+                <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 8 Days / 7 Nights</div>
+                <div class="card-meta-item"><i class="fa-solid fa-users"></i> Max 10</div>
+                <div class="card-meta-item"><i class="fa-solid fa-star text-warning"></i> 4.96 (156)</div>
+              </div>
+              <p class="text-muted small mb-3">First-class panoramic rail cars, Matterhorn Gornergrat summit, St. Moritz spa resorts, and fondue evenings.</p>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Price per person</span>
+                  <span class="card-price-value">$2,490</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Details</a>
+                  <a href="404.html" class="btn btn-primary-wn btn-sm-wn">Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3: Santorini -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80" alt="Santorini Sunset Romance" loading="lazy">
+              <span class="card-badge gold">Romantic Getaway</span>
+              <button class="wishlist-btn" data-id="pkg-santorini-romance" aria-label="Save Santorini Package to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Santorini, Greece</span>
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Santorini Sunset Odyssey & Cycladic Charm</a>
+              </h3>
+              <div class="card-meta-list">
+                <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 5 Days / 4 Nights</div>
+                <div class="card-meta-item"><i class="fa-solid fa-users"></i> Couples</div>
+                <div class="card-meta-item"><i class="fa-solid fa-star text-warning"></i> 4.94 (215)</div>
+              </div>
+              <p class="text-muted small mb-3">Clifftop cave suites with heated plunge pools, private catamaran sunset sail, and volcanic wine pairings.</p>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Price per person</span>
+                  <span class="card-price-value">$1,680</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Details</a>
+                  <a href="404.html" class="btn btn-primary-wn btn-sm-wn">Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 4: Maldives -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives Overwater Luxury" loading="lazy">
+              <span class="card-badge gold">All-Inclusive Ultra</span>
+              <button class="wishlist-btn" data-id="pkg-maldives-luxury" aria-label="Save Maldives Package to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Maldives, Indian Ocean</span>
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Maldives Overwater Luxury Sanctuary</a>
+              </h3>
+              <div class="card-meta-list">
+                <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 6 Days / 5 Nights</div>
+                <div class="card-meta-item"><i class="fa-solid fa-users"></i> Private</div>
+                <div class="card-meta-item"><i class="fa-solid fa-star text-warning"></i> 4.98 (310)</div>
+              </div>
+              <p class="text-muted small mb-3">Overwater stilt villa, dedicated 24/7 butler, scenic seaplane flight, and underwater lagoon restaurant dinner.</p>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Price per person</span>
+                  <span class="card-price-value">$3,200</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Details</a>
+                  <a href="404.html" class="btn btn-primary-wn btn-sm-wn">Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 5: Kyoto -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Kyoto Zen Heritage" loading="lazy">
+              <span class="card-badge">Cultural Immersion</span>
+              <button class="wishlist-btn" data-id="pkg-kyoto-zen" aria-label="Save Kyoto Package to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Kyoto, Japan</span>
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Kyoto Zen Heritage & Imperial Splendors</a>
+              </h3>
+              <div class="card-meta-list">
+                <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 6 Days / 5 Nights</div>
+                <div class="card-meta-item"><i class="fa-solid fa-users"></i> Max 10</div>
+                <div class="card-meta-item"><i class="fa-solid fa-star text-warning"></i> 4.89 (142)</div>
+              </div>
+              <p class="text-muted small mb-3">Traditional luxury Ryokan stay with onsen, tea master ceremony, early-access Fushimi Inari, and Kaiseki.</p>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Price per person</span>
+                  <span class="card-price-value">$1,550</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Details</a>
+                  <a href="404.html" class="btn btn-primary-wn btn-sm-wn">Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 6: Kerala -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80" alt="Kerala Spice Trails" loading="lazy">
+              <span class="card-badge">Nature & Wellness</span>
+              <button class="wishlist-btn" data-id="pkg-kerala-backwaters" aria-label="Save Kerala Package to wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="wn-card-body">
+              <div class="card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Kerala, India</span>
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Kerala Spice Trails & Backwater Serenades</a>
+              </h3>
+              <div class="card-meta-list">
+                <div class="card-meta-item"><i class="fa-solid fa-clock"></i> 7 Days / 6 Nights</div>
+                <div class="card-meta-item"><i class="fa-solid fa-users"></i> Families</div>
+                <div class="card-meta-item"><i class="fa-solid fa-star text-warning"></i> 4.86 (128)</div>
+              </div>
+              <p class="text-muted small mb-3">Private handcrafted houseboat cruise, Munnar tea plantation trek, Ayurvedic spa therapy, and Kathakali show.</p>
+              <div class="card-price-row">
+                <div>
+                  <span class="card-price-label">Price per person</span>
+                  <span class="card-price-value">$890</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="404.html" class="btn btn-outline-wn btn-sm-wn">Details</a>
+                  <a href="404.html" class="btn btn-primary-wn btn-sm-wn">Book</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="404.html" class="btn btn-outline-wn px-4">
+          <i class="fa-solid fa-layer-group"></i> Explore All Tour Packages
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Luxury Hotels and Resorts -->
+  <section class="section-padding bg-white" id="luxuryHotels">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-bed"></i> Sublime Hospitality
+        </span>
+        <h2 class="section-title cinema-title">Luxury Hotels & Resorts</h2>
+        <p class="section-description">
+          Retreat to world-renowned cliffside sanctuaries, alpine palaces, and private overwater atolls where impeccable comfort meets extraordinary nature.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Hotel 1 -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift h-100 flex-md-row">
+            <div class="wn-card-img-wrapper col-md-5" style="height: auto; min-height: 240px;">
+              <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="The Royal Azure Resort Bali" style="height: 100%;">
+              <span class="card-badge gold"><i class="fa-solid fa-star"></i> 5-Star Resort</span>
+            </div>
+            <div class="wn-card-body col-md-7 d-flex flex-column justify-content-between">
+              <div>
+                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Nusa Dua, Bali</div>
+                <h3 class="card-title fs-5"><a href="404.html">The Royal Azure Resort & Spa</a></h3>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-primary-blue text-white">4.95</span>
+                  <span class="small text-muted fw-bold">Superb &bull; 420 reviews</span>
+                </div>
+                <p class="text-muted small mb-3">Set upon limestone cliffs overlooking the Indian Ocean with private plunge pool villas and Ayurvedic spa pavilions.</p>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Infinity Pool</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Private Beach</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Butler Service</span>
+                </div>
+              </div>
+              <div class="card-price-row mt-2 pt-2 border-top">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value fs-5">$280 <small class="text-muted fs-6 fw-normal">/ night</small></span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">View Hotel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift h-100 flex-md-row">
+            <div class="wn-card-img-wrapper col-md-5" style="height: auto; min-height: 240px;">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Alpine Crest Palace Swiss" style="height: 100%;">
+              <span class="card-badge gold"><i class="fa-solid fa-star"></i> 5-Star Palace</span>
+            </div>
+            <div class="wn-card-body col-md-7 d-flex flex-column justify-content-between">
+              <div>
+                <div class="card-location"><i class="fa-solid fa-location-dot"></i> St. Moritz, Switzerland</div>
+                <h3 class="card-title fs-5"><a href="404.html">Alpine Crest Palace & Grand Spa</a></h3>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-primary-blue text-white">4.97</span>
+                  <span class="small text-muted fw-bold">Exceptional &bull; 380 reviews</span>
+                </div>
+                <p class="text-muted small mb-3">Iconic alpine sanctuary offering heated outdoor snow pools, ski-in/ski-out access, and Michelin-starred cuisine.</p>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Thermal Spa</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Ski Concierge</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Chauffeur</span>
+                </div>
+              </div>
+              <div class="card-price-row mt-2 pt-2 border-top">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value fs-5">$520 <small class="text-muted fs-6 fw-normal">/ night</small></span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">View Hotel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift h-100 flex-md-row">
+            <div class="wn-card-img-wrapper col-md-5" style="height: auto; min-height: 240px;">
+              <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80" alt="Caldera Bliss Cave Suites" style="height: 100%;">
+              <span class="card-badge gold"><i class="fa-solid fa-star"></i> Luxury Boutique</span>
+            </div>
+            <div class="wn-card-body col-md-7 d-flex flex-column justify-content-between">
+              <div>
+                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Oia, Santorini</div>
+                <h3 class="card-title fs-5"><a href="404.html">Caldera Bliss Cave Suites</a></h3>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-primary-blue text-white">4.93</span>
+                  <span class="small text-muted fw-bold">Superb &bull; 512 reviews</span>
+                </div>
+                <p class="text-muted small mb-3">Carved into the volcanic caldera face, featuring whitewashed stone curves, private heated plunge pools, and sunset champagne terraces.</p>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Plunge Pool</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Caldera View</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Yacht Access</span>
+                </div>
+              </div>
+              <div class="card-price-row mt-2 pt-2 border-top">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value fs-5">$420 <small class="text-muted fs-6 fw-normal">/ night</small></span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">View Hotel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel 4 -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift h-100 flex-md-row">
+            <div class="wn-card-img-wrapper col-md-5" style="height: auto; min-height: 240px;">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Soneva Celestial Maldives" style="height: 100%;">
+              <span class="card-badge gold"><i class="fa-solid fa-star"></i> 5-Star Ultra</span>
+            </div>
+            <div class="wn-card-body col-md-7 d-flex flex-column justify-content-between">
+              <div>
+                <div class="card-location"><i class="fa-solid fa-location-dot"></i> Baa Atoll, Maldives</div>
+                <h3 class="card-title fs-5"><a href="404.html">Soneva Celestial Lagoon Resort</a></h3>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-primary-blue text-white">4.99</span>
+                  <span class="small text-muted fw-bold">Flawless &bull; 460 reviews</span>
+                </div>
+                <p class="text-muted small mb-3">Barefoot luxury overwater villas with retractable stargazing roofs, private waterslides into the lagoon, and underwater coral dining.</p>
+                <div class="d-flex flex-wrap gap-1 mb-2">
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Overwater Slide</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">Barefoot Butler</span>
+                  <span class="badge bg-warm-ivory text-primary-blue border small">House Reef</span>
+                </div>
+              </div>
+              <div class="card-price-row mt-2 pt-2 border-top">
+                <div>
+                  <span class="card-price-label">Starting from</span>
+                  <span class="card-price-value fs-5">$850 <small class="text-muted fs-6 fw-normal">/ night</small></span>
+                </div>
+                <a href="404.html" class="btn btn-outline-wn btn-sm-wn">View Hotel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="404.html" class="btn btn-primary-wn px-4">
+          <i class="fa-solid fa-hotel"></i> Explore All Luxury Properties
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Travel Experiences -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Tailored Horizons
+        </span>
+        <h2 class="section-title cinema-title">Immersive Travel Experiences</h2>
+        <p class="section-description">
+          Step beyond conventional tourism with rare encounters curated around your unique personal passions.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-card" onclick="window.location.href='experiences.html'">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountain Adventures" loading="lazy">
+            <div class="experience-overlay">
+              <i class="fa-solid fa-mountain-sun experience-icon"></i>
+              <h3 class="experience-title">Mountain Adventures</h3>
+              <p class="experience-desc">Glacial trekking, heli-skiing, and alpine summits with certified mountaineers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-card" onclick="window.location.href='experiences.html'">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Beach Escapes" loading="lazy">
+            <div class="experience-overlay">
+              <i class="fa-solid fa-umbrella-beach experience-icon"></i>
+              <h3 class="experience-title">Beach Escapes</h3>
+              <p class="experience-desc">Powder white sands, secluded coves, and private reef snorkeling charters.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="experience-card" onclick="window.location.href='experiences.html'">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Wildlife Safaris" loading="lazy">
+            <div class="experience-overlay">
+              <i class="fa-solid fa-paw experience-icon"></i>
+              <h3 class="experience-title">Wildlife Safaris</h3>
+              <p class="experience-desc">Follow the Great Wildebeest Migration in luxury tented bush camps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-card" onclick="window.location.href='experiences.html'">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Cultural Tours" loading="lazy">
+            <div class="experience-overlay">
+              <i class="fa-solid fa-landmark experience-icon"></i>
+              <h3 class="experience-title">Cultural Immersions</h3>
+              <p class="experience-desc">Private temple rituals, imperial palace walks, and centuries-old artisan masterclasses.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-card" onclick="window.location.href='experiences.html'">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Cruise Holidays" loading="lazy">
+            <div class="experience-overlay">
+              <i class="fa-solid fa-ship experience-icon"></i>
+              <h3 class="experience-title">Cruise Holidays</h3>
+              <p class="experience-desc">Private catamaran island hopping and sunset champagne dining across turquoise waters.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="experience-card" onclick="window.location.href='experiences.html'">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Culinary Tours" loading="lazy">
+            <div class="experience-overlay">
+              <i class="fa-solid fa-utensils experience-icon"></i>
+              <h3 class="experience-title">Epicurean Trails</h3>
+              <p class="experience-desc">Michelin cooking masterclasses, private heritage cellar tastings, and spice garden trails.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Section 9A: Private Aviation & Superyacht Charters -->
+  <section class="section-padding bg-white" id="aviationYachtSection">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-8" data-aos="fade-right">
+          <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+            <i class="fa-solid fa-plane-up me-1"></i> Bespoke Mobility Suite
+          </span>
+          <h2 class="display-6 fw-bold text-primary-blue mb-2">Private Jet & Superyacht Charters</h2>
+          <p class="text-muted lead mb-0">Experience absolute autonomy in motion. Point-to-point private aviation, helicopter transfers, and crewed superyacht charters.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
+          <a href="contact.html" class="btn btn-primary-wn px-4 py-2">
+            <i class="fa-solid fa-compass me-2"></i> Inquire Charter
+          </a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <div class="position-relative" style="height: 240px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Gulfstream G650ER">
+              <span class="position-absolute top-0 start-0 m-3 badge bg-primary-blue text-white px-3 py-2 rounded-pill">Intercontinental</span>
+            </div>
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="fw-bold text-primary-blue mb-0">Gulfstream G650ER</h5>
+                <span class="text-sunset-gold fw-bold small">Up to 14 Guests</span>
+              </div>
+              <p class="text-muted small mb-3">Direct long-range flights connecting Zurich, Dubai, Tokyo, and London with dedicated private cabin attendant and sleep staterooms.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top small">
+                <span class="text-muted"><i class="fa-solid fa-gauge-high text-sunset-gold me-1"></i> Mach 0.90 Cruise</span>
+                <a href="404.html" class="text-sunset-gold fw-bold text-decoration-none">Reserve Flight &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <div class="position-relative" style="height: 240px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Amalfi Superyacht">
+              <span class="position-absolute top-0 start-0 m-3 badge bg-sunset-gold text-white px-3 py-2 rounded-pill">Maritime Suite</span>
+            </div>
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="fw-bold text-primary-blue mb-0">Mediterranean Superyacht</h5>
+                <span class="text-sunset-gold fw-bold small">12 Berths / 16 Crew</span>
+              </div>
+              <p class="text-muted small mb-3">Private helipad, onboard Michelin-trained culinary team, tender boats, and exclusive mooring privileges in Santorini, Capri, and Ibiza.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top small">
+                <span class="text-muted"><i class="fa-solid fa-anchor text-sunset-gold me-1"></i> Master Stateroom</span>
+                <a href="404.html" class="text-sunset-gold fw-bold text-decoration-none">Explore Voyages &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <div class="position-relative" style="height: 240px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Alpine Helicopter">
+              <span class="position-absolute top-0 start-0 m-3 badge bg-primary-blue text-white px-3 py-2 rounded-pill">Alpine Transfer</span>
+            </div>
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="fw-bold text-primary-blue mb-0">Alpine Helicopter Shuttle</h5>
+                <span class="text-sunset-gold fw-bold small">6 Passengers</span>
+              </div>
+              <p class="text-muted small mb-3">Fast air transfers from Geneva or Zurich directly to private ski chalets and resorts in Zermatt, St. Moritz, and Courchevel.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top small">
+                <span class="text-muted"><i class="fa-solid fa-mountain text-sunset-gold me-1"></i> Helipad-to-Door</span>
+                <a href="404.html" class="text-sunset-gold fw-bold text-decoration-none">Book Transfer &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Special Offers Banner -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="offer-banner" data-aos="zoom-in">
+        <div class="row align-items-center position-relative" style="z-index: 2;">
+          <div class="col-lg-8">
+            <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-3">
+              <i class="fa-solid fa-bolt me-1"></i> Limited-Time Seasonal Privileges
+            </span>
+            <h2 class="text-white display-5 fw-bold mb-3">
+              Enjoy Up to 25% Off On Early-Bird 2026 Escapes
+            </h2>
+            <p class="text-white-50 lead mb-4">
+              Book your European summer villa or tropical atoll retreat 60 days in advance to unlock complimentary room upgrades, private airport limousine transfers, and resort spa credits.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="404.html" class="btn btn-primary-wn btn-lg px-4">
+                <i class="fa-solid fa-tag"></i> Explore Offers
+              </a>
+              <a href="contact.html" class="btn btn-outline-gold btn-lg px-4">
+                <i class="fa-solid fa-headset"></i> Inquire with Concierge
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center d-none d-lg-block">
+            <div class="p-4 bg-white text-dark rounded-4 shadow-lg text-center d-inline-block">
+              <i class="fa-solid fa-gift fa-3x text-sunset-gold mb-2"></i>
+              <h4 class="text-primary-blue mb-1">PROMO CODE</h4>
+              <div class="p-2 bg-warm-ivory rounded border border-warning fw-bold text-sunset-gold fs-5 mb-2">
+                WANDER2026
+              </div>
+              <small class="text-muted d-block">Valid on luxury packages booked this month.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: About Stackly -->
+  <section class="section-padding bg-warm-ivory" id="aboutSection">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="About Stackly" class="rounded-4 shadow-lg w-100">
+            <div class="position-absolute bottom-0 end-0 bg-primary-blue text-white p-4 rounded-4 shadow-lg m-3 d-none d-sm-block" style="max-width: 240px;">
+              <h4 class="text-sunset-gold mb-1 fs-3 fw-bold">14+ Years</h4>
+              <p class="small mb-0 text-white-50">Orchestrating bespoke travel milestones worldwide.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="section-subtitle">
+            <i class="fa-solid fa-gem"></i> Authentic Craftsmanship
+          </span>
+          <h2 class="section-title cinema-title">A New Standard in Bespoke Travel</h2>
+          <p class="lead text-muted mb-4">
+            Founded on the philosophy that true luxury lies in unhurried discovery, Stackly creates rare travel moments that awaken the senses and inspire profound wonder.
+          </p>
+          <p class="text-muted mb-4">
+            Our global collective of seasoned destination specialists, tastemakers, and multilingual private guides collaborate to handle every nuance—from chartered seaplanes and private estate rentals to after-hours museum entries.
+          </p>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sunset-gold"></i>
+                <span class="fw-bold text-primary-blue">Certified B-Corp Eco Partner</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sunset-gold"></i>
+                <span class="fw-bold text-primary-blue">100% Carbon-Offset Options</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sunset-gold"></i>
+                <span class="fw-bold text-primary-blue">24/7 Global Field Network</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-circle-check text-sunset-gold"></i>
+                <span class="fw-bold text-primary-blue">100% Tailored Private Itineraries</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-primary-wn">
+            <i class="fa-solid fa-arrow-right"></i> Discover Our Philosophy
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: Customer Testimonials -->
+  <section class="section-padding bg-white" id="guestReviews">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-comment-dots"></i> Traveler Stories
+        </span>
+        <h2 class="section-title cinema-title">Words from Our Global Guests</h2>
+        <p class="section-description">
+          Read genuine reflections from travelers who entrusted their most meaningful life celebrations to Stackly.
+        </p>
+      </div>
+
+      <!-- Horizontal Scroll Navigation Controls & Helper Text -->
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3" data-aos="fade-up">
+        <div class="d-flex align-items-center gap-2 text-muted small">
+          <span class="badge bg-sunset-gold text-dark px-3 py-1 rounded-pill fw-bold">Verified Travelers</span>
+          <span><i class="fa-solid fa-arrows-left-right text-sunset-gold me-1"></i> Swipe or scroll horizontally to explore guest reflections</span>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" class="testimonial-nav-btn prev-testimonial" aria-label="Previous testimonial">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button type="button" class="testimonial-nav-btn next-testimonial" aria-label="Next testimonial">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Horizontal Scrollable Testimonial Track -->
+      <div class="testimonials-horizontal-scroll" id="testimonialsScroll" data-aos="fade-up" data-aos-delay="100">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Stackly orchestrated our honeymoon to Santorini with absolute perfection. From the private cliffside cave villa in Oia to the surprise champagne catamaran cruise at sunset, every minute felt straight out of a dream."
+          </p>
+          <div class="testimonial-author-wrapper mt-auto">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Julianne Sterling" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Julianne & David S.</h4>
+              <span class="testimonial-destination">Santorini Sunset Odyssey</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The Glacier Express and Gornergrat rail passes were seamless. Our private mountain guide in Zermatt took us on trails where we had views of the Matterhorn completely to ourselves. Truly a world-class travel agency."
+          </p>
+          <div class="testimonial-author-wrapper mt-auto">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Harrison Brooks" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Harrison Brooks</h4>
+              <span class="testimonial-destination">Swiss Alpine Grandeur</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The underwater dining reservation in the Maldives exceeded every expectation. Stackly's personal concierge stayed in touch via WhatsApp throughout our trip to ensure zero hiccups. Highly recommend!"
+          </p>
+          <div class="testimonial-author-wrapper mt-auto">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Sophia Laurent" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Sophia Laurent</h4>
+              <span class="testimonial-destination">Maldives Overwater Sanctuary</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 (New) -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Our private two-week journey through Kyoto and Nara was an extraordinary spiritual awakening. The private tea ceremony in Uji and after-hours temple visits curated by Stackly were unforgettable highlights."
+          </p>
+          <div class="testimonial-author-wrapper mt-auto">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Dr. Alistair & Elena Vance" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Dr. Alistair & Elena Vance</h4>
+              <span class="testimonial-destination">Kyoto Zen Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 (New) -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Cruising the tranquil backwaters of Kerala in a private traditional kettuvallam houseboat was heavenly. Stackly's 24/7 bespoke support and private culinary masterclasses made this our most effortless holiday ever."
+          </p>
+          <div class="testimonial-author-wrapper mt-auto">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Marcus & Chloe Chen" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Marcus & Chloe Chen</h4>
+              <span class="testimonial-destination">Kerala Spice Trails</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 12: Travel Inspiration Blog -->
+  <section class="section-padding bg-warm-ivory" id="travelBlog">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-newspaper"></i> Editorial Dispatches
+        </span>
+        <h2 class="section-title cinema-title">Travel Inspiration & Insights</h2>
+        <p class="section-description">
+          Curated guides, hidden sanctuaries, packing advisories, and insider essays from our international correspondents.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Blog 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper" style="height: 220px;">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali Hidden Sanctuaries" loading="lazy">
+              <span class="card-badge">Destination Guide</span>
+            </div>
+            <div class="wn-card-body">
+              <div class="d-flex align-items-center gap-2 text-muted small mb-2">
+                <i class="fa-regular fa-calendar"></i> October 12, 2026 &bull; 6 min read
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">10 Hidden Sanctuaries in Bali You Have Never Heard Of</a>
+              </h3>
+              <p class="text-muted small mb-3">
+                Beyond the crowded alleys of Seminyak lie untouched waterfalls, sacred sea caverns, and mist-laden bamboo valleys.
+              </p>
+              <div class="mt-auto pt-2 border-top">
+                <a href="404.html" class="fw-bold text-primary-blue small">
+                  Read Full Article &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper" style="height: 220px;">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Swiss Alps Scenic Train" loading="lazy">
+              <span class="card-badge">Rail Journeys</span>
+            </div>
+            <div class="wn-card-body">
+              <div class="d-flex align-items-center gap-2 text-muted small mb-2">
+                <i class="fa-regular fa-calendar"></i> September 28, 2026 &bull; 8 min read
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">The Ultimate Guide to Traversing the Swiss Alps by Scenic Train</a>
+              </h3>
+              <p class="text-muted small mb-3">
+                How to ride the Glacier Express and Bernina Express like an insider, from panoramic glass cars to dining tips.
+              </p>
+              <div class="mt-auto pt-2 border-top">
+                <a href="404.html" class="fw-bold text-primary-blue small">
+                  Read Full Article &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper" style="height: 220px;">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Sustainable Luxury" loading="lazy">
+              <span class="card-badge">Eco Travel</span>
+            </div>
+            <div class="wn-card-body">
+              <div class="d-flex align-items-center gap-2 text-muted small mb-2">
+                <i class="fa-regular fa-calendar"></i> September 15, 2026 &bull; 5 min read
+              </div>
+              <h3 class="card-title fs-5">
+                <a href="404.html">Sustainable Luxury: How Modern Resorts Are Protecting Fragile Marine Atolls</a>
+              </h3>
+              <p class="text-muted small mb-3">
+                Pioneering eco-resorts in the Maldives are proving world-class hospitality can actively regenerate delicate coral reefs.
+              </p>
+              <div class="mt-auto pt-2 border-top">
+                <a href="404.html" class="fw-bold text-primary-blue small">
+                  Read Full Article &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="blog.html" class="btn btn-outline-wn px-4">
+          <i class="fa-solid fa-book-open"></i> Browse All Articles
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 13: Newsletter Subscription -->
+  <section class="section-padding bg-primary-blue text-white">
+    <div class="container">
+      <div class="row align-items-center justify-content-between g-4">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-3">
+            <i class="fa-solid fa-paper-plane me-1"></i> Private Circle Newsletter
+          </span>
+          <h2 class="text-white display-6 fw-bold mb-2">Join the Stackly Circle</h2>
+          <p class="text-white-50 lead mb-0">
+            Receive seasonal private villa portfolios, invitation-only departures, and insider destination intelligence straight to your inbox.
+          </p>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left">
+          <form class="newsletter-form d-flex flex-column flex-sm-row gap-2">
+            <input type="email" class="form-control form-control-lg rounded-pill px-4" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary-wn btn-lg px-4 flex-shrink-0">
+              Subscribe
+            </button>
+          </form>
+          <small class="text-white-50 d-block mt-2">
+            <i class="fa-solid fa-lock me-1"></i> We respect your privacy. Unsubscribe at any time.
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 14: Frequently Asked Questions -->
+  <section class="section-padding bg-warm-ivory" id="faqSection">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">
+          <i class="fa-solid fa-circle-question"></i> Clear Guidance
+        </span>
+        <h2 class="section-title cinema-title">Frequently Asked Questions</h2>
+        <p class="section-description">
+          Everything you need to know about reserving, customizing, and safeguarding your luxury holiday.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="accordion wn-accordion" id="homeFaqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqOne" aria-expanded="true">
+                  How does the bespoke booking procedure work?
+                </button>
+              </h3>
+              <div id="collapseFaqOne" class="accordion-collapse collapse show" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Once you select a tour package or submit a custom inquiry, your dedicated travel designer conducts an initial consultation to refine dates, hotel tiers, and personal preferences. Upon confirmation, you receive a detailed digital itinerary and voucher reference code accessible inside your customer dashboard.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTwo" aria-expanded="false">
+                  What is your cancellation and refund policy?
+                </button>
+              </h3>
+              <div id="collapseFaqTwo" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  We provide free cancellation up to 30 days prior to departure for all standard tour packages with a full refund. For hotel and villa reservations, partner policies range between 48 hours and 14 days, which are clearly shown before final confirmation.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqThree" aria-expanded="false">
+                  What payment options are supported?
+                </button>
+              </h3>
+              <div id="collapseFaqThree" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  We accept all major international credit cards (Visa, MasterCard, American Express), encrypted wire transfers, and verified split-deposit payment schedules for departures booked over 90 days in advance.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFour" aria-expanded="false">
+                  Are international flights and travel insurance included?
+                </button>
+              </h3>
+              <div id="collapseFaqFour" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Our packaged rates focus on luxury ground accommodations, private transport, and guided activities. We offer comprehensive concierge flight coordination and assist with comprehensive global travel insurance through certified underwriters.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Section 14B: The Stackly Signature Member Privileges -->
+  <section class="section-padding bg-warm-ivory" id="memberPrivilegesSection">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+          <i class="fa-solid fa-crown me-1"></i> The Stackly Circle
+        </span>
+        <h2 class="display-6 fw-bold text-primary-blue mb-3 cinema-title">Signature Membership Privileges</h2>
+        <p class="text-muted lead">Every reservation made with Stackly unlocks unmatched hospitality privileges, guaranteed suite upgrades, and continuous concierge attention.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border text-center hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 68px; height: 68px; font-size: 1.75rem;">
+              <i class="fa-solid fa-bell-concierge"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">24/7 Travel Architect</h5>
+            <p class="text-muted small mb-0">A single dedicated concierge managing pre-trip curations, dining reservations, and spontaneous itinerary changes.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border text-center hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 68px; height: 68px; font-size: 1.75rem;">
+              <i class="fa-solid fa-hotel"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Complimentary Upgrades</h5>
+            <p class="text-muted small mb-0">Automatic room category upgrades, daily champagne breakfast for two, and $150 spa credits at partnered properties.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border text-center hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 68px; height: 68px; font-size: 1.75rem;">
+              <i class="fa-solid fa-passport"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">VIP Tarmac Clearance</h5>
+            <p class="text-muted small mb-0">Airside luxury car greeting, diplomatic fast-track through customs, and private departure lounges at 80+ international hubs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border text-center hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 68px; height: 68px; font-size: 1.75rem;">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Zero-Penalty Flexibility</h5>
+            <p class="text-muted small mb-0">Penalty-free date shifts and transparent booking amendments up to 72 hours before arrival across our handpicked hotels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 15: Final Call to Action -->
+  <section class="cta-section">
+    <div class="cta-bg-pattern"></div>
+    <div class="container position-relative" style="z-index: 2;" data-aos="zoom-in">
+      <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-3">
+        <i class="fa-solid fa-compass me-1"></i> Start Your Journey Today
+      </span>
+      <h2 class="cta-title">Your Next Great Adventure Starts Here.</h2>
+      <p class="cta-desc">
+        Let our passionate destination architects craft an unforgettable voyage tailored specifically to your aspirations.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="404.html" class="btn btn-primary-wn btn-lg px-4">
+          <i class="fa-solid fa-calendar-check"></i> Plan Your Trip
+        </a>
+        <a href="404.html" class="btn btn-white-wn btn-lg px-4">
+          <i class="fa-solid fa-earth-americas"></i> Explore Destinations
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 16: Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="footer-social-btn" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" class="footer-social-btn" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com" class="footer-social-btn" aria-label="X Twitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" class="footer-social-btn" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+            <li><a href="hotels.html">Hotels & Resorts</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="services.html">Travel Services</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="destination-details.html?id=dest-amalfi">Amalfi Coast</a></li>
+            <li><a href="destination-details.html?id=dest-serengeti">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Sample Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>100 Marina Boulevard, Suite 400, Financial District (Sample Demo Address)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (800) 592-NEST &bull; 24/7 Global</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>concierge@stackly.com</span>
+          </div>
+          <div class="mt-3">
+            <a href="user/user-dashboard.html" class="small text-white-50 me-2"><i class="fa-solid fa-user me-1"></i> Client Portal</a>
+            <span class="text-white-50">&bull;</span>
+            <a href="admin/admin-login.html" class="small text-white-50 ms-2"><i class="fa-solid fa-lock me-1"></i> Admin Portal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="faq.html" class="text-white-50">FAQs</a>
+          <a href="contact.html" class="text-white-50">Privacy Policy</a>
+          <a href="contact.html" class="text-white-50">Terms & Conditions</a>
+          <a href="error.html" class="text-white-50">Sitemap (404)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

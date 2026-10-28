@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard — Stackly Luxury Travel</title>
+  <meta name="description" content="View and manage your luxury bookings, upcoming itineraries, and saved wishlists.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="dashboard-layout">
+
+  <!-- Customer Sidebar (Strictly Internal Dashboard Navigation) -->
+  <aside class="dashboard-sidebar">
+    <div class="dashboard-brand">
+      <div class="dashboard-brand-left">
+        <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img dashboard-sidebar-logo">
+      </div>
+      <button type="button" class="dashboard-sidebar-close" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="dashboard-nav">
+      <a href="user-dashboard.html" class="dashboard-nav-link active">
+        <i class="fa-solid fa-gauge"></i> Overview
+      </a>
+      <a href="my-bookings.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-calendar-check"></i> My Bookings
+      </a>
+      <a href="wishlist.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-heart"></i> Saved Wishlist
+      </a>
+      <a href="profile.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-user-gear"></i> Profile & Settings
+      </a>
+      <a href="browse-tours.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-suitcase"></i> Browse Tours
+      </a>
+      <a href="explore-destinations.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-earth-americas"></i> Explore Havens
+      </a>
+    </nav>
+
+    <!-- Sidebar Footer (No external public links) -->
+    <div class="dashboard-nav-footer">
+      <a href="../login.html" class="dashboard-nav-link text-danger mt-1">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Container -->
+  <main class="dashboard-main">
+    <!-- Topbar (Mobile: Logo + 3-line Hamburger only | Desktop: Search bar + Bell + Swetha Ramesh Profile Icon with Email & Password) -->
+    <header class="dashboard-topbar">
+      <!-- Mobile View (Logo + Hamburger only) -->
+      <div class="dashboard-mobile-header d-lg-none">
+        <a href="user-dashboard.html" class="dashboard-mobile-logo">
+          <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img">
+        </a>
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop View (Search + Bell + Profile Icon) -->
+      <div class="dashboard-desktop-header d-none d-lg-flex">
+        <!-- Search bar with Search Icon -->
+        <form class="dashboard-search-bar dashboard-search-form" id="dashboardSearchForm">
+          <button type="submit" class="border-0 bg-transparent p-0 text-muted" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+          <input type="text" placeholder="Search bookings, flights, luxury destinations...">
+        </form>
+
+        <!-- Right Side: Bell Icon + Profile -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Notification Bell Icon (Redirects to 404 on click) -->
+          <button class="dashboard-notif-btn" type="button" title="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- Profile in Top Right Corner (Icon only, No Image, Swetha Ramesh, Email & Password display) -->
+          <div class="dropdown">
+            <button class="dashboard-header-profile dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="dashboard-avatar-icon">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="dashboard-profile-text text-start">
+                <div class="profile-name">Swetha Ramesh</div>
+                <div class="profile-email">swetha.ramesh@gmail.com</div>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-3 profile-dropdown-menu" style="min-width: 310px;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom">
+                <div class="dashboard-avatar-icon large">
+                  <i class="fa-solid fa-circle-user fa-2x text-primary-blue"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold profile-name">Swetha Ramesh</h6>
+                  <span class="small text-muted profile-email">swetha.ramesh@gmail.com</span>
+                </div>
+              </div>
+
+              <!-- Display Credentials (Email & Password) -->
+              <div class="mb-3 bg-light p-2 rounded border small">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted"><i class="fa-solid fa-envelope me-1"></i> Email ID:</span>
+                  <strong class="text-dark profile-email">swetha.ramesh@gmail.com</strong>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted"><i class="fa-solid fa-lock me-1"></i> Password:</span>
+                  <span class="badge bg-secondary-subtle text-dark border font-monospace">••••••••••••</span>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="profile.html" class="btn btn-sm btn-outline-wn">
+                  <i class="fa-solid fa-user-gear me-1"></i> Account Settings
+                </a>
+                <a href="../login.html" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Welcome Greeting & Stat Metrics Row -->
+    <div class="dashboard-card mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="h3 fw-bold text-primary-blue mb-1">Welcome back, <span class="profile-name text-sunset-gold">Swetha Ramesh</span>!</h2>
+          <p class="text-muted mb-0">Here is your private luxury travel dashboard, active itineraries, and member privileges.</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary-wn btn-sm-wn">
+            <i class="fa-solid fa-plus me-1"></i> New Reservation
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-widget">
+            <div class="stat-widget-info">
+              <h3 id="statTotalBookings">3</h3>
+              <p>Total Bookings</p>
+            </div>
+            <div class="stat-widget-icon blue">
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-widget">
+            <div class="stat-widget-info">
+              <h3 id="statUpcomingTrips">2</h3>
+              <p>Upcoming Trips</p>
+            </div>
+            <div class="stat-widget-icon green">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-widget">
+            <div class="stat-widget-info">
+              <h3 id="statCompletedTrips">1</h3>
+              <p>Completed Trips</p>
+            </div>
+            <div class="stat-widget-icon">
+              <i class="fa-solid fa-flag-checkered"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="stat-widget">
+            <div class="stat-widget-info">
+              <h3 id="statSavedDestinations">3</h3>
+              <p>Wishlist Items</p>
+            </div>
+            <div class="stat-widget-icon">
+              <i class="fa-solid fa-heart text-danger"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Exclusive Member Privileges & Loyalty Tier -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <div>
+          <h4 class="dashboard-card-title"><i class="fa-solid fa-crown text-sunset-gold me-2"></i>Stackly Elite Loyalty Tier & Member Privileges</h4>
+          <small class="text-muted">Exclusive perks, dedicated concierge access, and private rewards for Platinum Diamond members.</small>
+        </div>
+        <span class="badge bg-warning-subtle text-dark border px-3 py-2 fw-bold"><i class="fa-solid fa-gem text-primary-blue me-1"></i> Platinum Tier &bull; 28,450 Elite Miles</span>
+      </div>
+
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-4">
+          <div class="p-3 rounded-4 bg-light border">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="small fw-bold text-muted">Tier Status Progress</span>
+              <span class="badge bg-primary-blue text-white">85% to Black Obsidian</span>
+            </div>
+            <div class="progress" style="height: 10px;">
+              <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%"></div>
+            </div>
+            <p class="small text-muted mt-2 mb-0">Earn 6,550 more miles by December 2026 to unlock unlimited private jet charters discount.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="p-3 rounded-3 border bg-white h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <i class="fa-solid fa-car-side text-primary-blue fa-lg"></i>
+                    <h6 class="mb-0 fw-bold">Airport Chauffeur Transfer</h6>
+                  </div>
+                  <p class="small text-muted mb-3">2 Complimentary luxury Mercedes Maybach airport rides available for your next booking.</p>
+                </div>
+                <button type="button" class="btn btn-outline-wn btn-sm-wn w-100">Claim Transfer Voucher</button>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="p-3 rounded-3 border bg-white h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <i class="fa-solid fa-hotel text-sunset-gold fa-lg"></i>
+                    <h6 class="mb-0 fw-bold">Overwater Villa Upgrade</h6>
+                  </div>
+                  <p class="small text-muted mb-3">Guaranteed suite upgrade upon arrival at partner five-star resorts in Maldives and Bali.</p>
+                </div>
+                <button type="button" class="btn btn-outline-wn btn-sm-wn w-100">Redeem Suite Voucher</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Destination Weather & Live Travel Alerts -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <div>
+          <h4 class="dashboard-card-title"><i class="fa-solid fa-cloud-sun text-primary-blue me-2"></i>Live Destination Weather & Travel Advisories</h4>
+          <small class="text-muted">Real-time climate conditions, local advisories, and preparation guides for your booked destinations.</small>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-arrows-rotate me-1"></i> Refresh Forecast</button>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 rounded-3 border bg-light h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success-subtle text-success fw-bold">Confirmed Departure</span>
+              <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> GMT+5</span>
+            </div>
+            <h5 class="fw-bold mb-1 text-primary-blue">Maldives Private Atoll</h5>
+            <div class="d-flex align-items-center gap-3 my-2">
+              <i class="fa-solid fa-sun fa-2x text-warning"></i>
+              <div>
+                <span class="h3 fw-bold mb-0">29°C</span>
+                <span class="text-muted small d-block">Sunny & Light Ocean Breeze</span>
+              </div>
+            </div>
+            <div class="small text-muted border-top pt-2 mt-2">
+              <div><i class="fa-solid fa-droplet text-primary me-1"></i> Humidity: 68% &bull; UV: 9 (High)</div>
+              <div><i class="fa-solid fa-compass text-secondary me-1"></i> Sunset Cruise: Operating as scheduled</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 rounded-3 border bg-light h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary-subtle text-primary fw-bold">Upcoming Departure</span>
+              <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> GMT+1</span>
+            </div>
+            <h5 class="fw-bold mb-1 text-primary-blue">Swiss Alps (Zermatt)</h5>
+            <div class="d-flex align-items-center gap-3 my-2">
+              <i class="fa-solid fa-snowflake fa-2x text-info"></i>
+              <div>
+                <span class="h3 fw-bold mb-0">2°C</span>
+                <span class="text-muted small d-block">Crisp Alpine Air & Powder Snow</span>
+              </div>
+            </div>
+            <div class="small text-muted border-top pt-2 mt-2">
+              <div><i class="fa-solid fa-wind text-primary me-1"></i> Wind: 12 km/h &bull; Visibility: 10 km</div>
+              <div><i class="fa-solid fa-train text-secondary me-1"></i> Glacier Express: All tracks open</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 rounded-3 border bg-light h-100">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-secondary-subtle text-dark fw-bold">Saved In Wishlist</span>
+              <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> GMT+3</span>
+            </div>
+            <h5 class="fw-bold mb-1 text-primary-blue">Santorini Caldera (Greece)</h5>
+            <div class="d-flex align-items-center gap-3 my-2">
+              <i class="fa-solid fa-cloud-sun fa-2x text-warning"></i>
+              <div>
+                <span class="h3 fw-bold mb-0">22°C</span>
+                <span class="text-muted small d-block">Golden Sunset & Mild Evening</span>
+              </div>
+            </div>
+            <div class="small text-muted border-top pt-2 mt-2">
+              <div><i class="fa-solid fa-sailboat text-primary me-1"></i> Sea Temp: 21°C &bull; Wind: 14 kt NW</div>
+              <div><i class="fa-solid fa-camera text-secondary me-1"></i> Sunset Photography: Peak clarity at 18:40</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Recent Bookings Table Card -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <h4 class="dashboard-card-title">Recent Booking Activity</h4>
+        <a href="my-bookings.html" class="btn btn-outline-wn btn-sm-wn">View All Bookings</a>
+      </div>
+      <div class="table-responsive-wn">
+        <table class="table align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Reference</th>
+              <th>Journey Title</th>
+              <th>Dates</th>
+              <th>Guests</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="recentBookingsTableBody">
+            <!-- Rendered by js/user-dashboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Curated Destinations for Your Travel Style -->
+    <div class="dashboard-card">
+      <div class="dashboard-card-header">
+        <h4 class="dashboard-card-title">Curated For Your Travel Style</h4>
+        <a href="explore-destinations.html" class="small fw-bold text-sunset-gold">Explore All Havens &rarr;</a>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper" style="height: 160px;">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80" alt="Maldives">
+              <span class="card-badge gold">Private Atoll</span>
+            </div>
+            <div class="p-3">
+              <h6 class="mb-1 text-primary-blue fw-bold">Maldives Overwater Sanctuary</h6>
+              <span class="small text-muted">From $2,400 / traveler</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper" style="height: 160px;">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80" alt="Swiss Alps">
+              <span class="card-badge">Alpine Peak</span>
+            </div>
+            <div class="p-3">
+              <h6 class="mb-1 text-primary-blue fw-bold">Swiss Alpine Grandeur</h6>
+              <span class="small text-muted">From $1,850 / traveler</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="wn-card hover-lift">
+            <div class="wn-card-img-wrapper" style="height: 160px;">
+              <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80" alt="Santorini">
+              <span class="card-badge gold">Caldera Villa</span>
+            </div>
+            <div class="p-3">
+              <h6 class="mb-1 text-primary-blue fw-bold">Santorini Sunset Romance</h6>
+              <span class="small text-muted">From $1,450 / traveler</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/user-dashboard.js"></script>
+  <script src="../js/dashboard-common.js"></script>
+</body>
+</html>

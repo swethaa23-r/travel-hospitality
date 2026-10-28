@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Havens — Stackly Client Portal</title>
+  <meta name="description" content="Explore world-class luxury destinations, private island sanctuaries, and seasonal peak calendars.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="dashboard-layout">
+
+  <!-- Customer Sidebar (Strictly Internal Navigation) -->
+  <aside class="dashboard-sidebar">
+    <div class="dashboard-brand">
+      <div class="dashboard-brand-left">
+        <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img dashboard-sidebar-logo">
+      </div>
+      <button type="button" class="dashboard-sidebar-close" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="dashboard-nav">
+      <a href="user-dashboard.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-gauge"></i> Overview
+      </a>
+      <a href="my-bookings.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-calendar-check"></i> My Bookings
+      </a>
+      <a href="wishlist.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-heart"></i> Saved Wishlist
+      </a>
+      <a href="profile.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-user-gear"></i> Profile & Settings
+      </a>
+      <a href="browse-tours.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-suitcase"></i> Browse Tours
+      </a>
+      <a href="explore-destinations.html" class="dashboard-nav-link active">
+        <i class="fa-solid fa-earth-americas"></i> Explore Havens
+      </a>
+    </nav>
+
+    <div class="dashboard-nav-footer">
+      <a href="../login.html" class="dashboard-nav-link text-danger mt-1">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="dashboard-main">
+    <!-- Topbar (Mobile: Logo + 3-line Hamburger only | Desktop: Search bar + Bell + Swetha Ramesh Profile Icon with Email & Password) -->
+    <header class="dashboard-topbar">
+      <!-- Mobile View (Logo + Hamburger only) -->
+      <div class="dashboard-mobile-header d-lg-none">
+        <a href="user-dashboard.html" class="dashboard-mobile-logo">
+          <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img">
+        </a>
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop View (Search + Bell + Profile Icon) -->
+      <div class="dashboard-desktop-header d-none d-lg-flex">
+        <!-- Search bar with Search Icon -->
+        <form class="dashboard-search-bar dashboard-search-form" id="dashboardSearchForm">
+          <button type="submit" class="border-0 bg-transparent p-0 text-muted" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+          <input type="text" placeholder="Search luxury havens, atolls, private chalets...">
+        </form>
+
+        <!-- Right Side: Bell Icon + Profile -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Notification Bell Icon (Redirects to 404 on click) -->
+          <button class="dashboard-notif-btn" type="button" title="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- Profile in Top Right Corner (Icon only, No Image, Swetha Ramesh, Email & Password display) -->
+          <div class="dropdown">
+            <button class="dashboard-header-profile dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="dashboard-avatar-icon">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="dashboard-profile-text text-start">
+                <div class="profile-name">Swetha Ramesh</div>
+                <div class="profile-email">swetha.ramesh@gmail.com</div>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-3 profile-dropdown-menu" style="min-width: 310px;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom">
+                <div class="dashboard-avatar-icon large">
+                  <i class="fa-solid fa-circle-user fa-2x text-primary-blue"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold profile-name">Swetha Ramesh</h6>
+                  <span class="small text-muted profile-email">swetha.ramesh@gmail.com</span>
+                </div>
+              </div>
+
+              <!-- Display Credentials (Email & Password) -->
+              <div class="mb-3 bg-light p-2 rounded border small">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted"><i class="fa-solid fa-envelope me-1"></i> Email ID:</span>
+                  <strong class="text-dark profile-email">swetha.ramesh@gmail.com</strong>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted"><i class="fa-solid fa-lock me-1"></i> Password:</span>
+                  <span class="badge bg-secondary-subtle text-dark border font-monospace">••••••••••••</span>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="profile.html" class="btn btn-sm btn-outline-wn">
+                  <i class="fa-solid fa-user-gear me-1"></i> Account Settings
+                </a>
+                <a href="../login.html" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Explorer Header & Continental Distribution -->
+    <div class="dashboard-card mb-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+          <h2 class="h3 fw-bold text-primary-blue mb-1">Global Sanctuary Havens</h2>
+          <p class="text-muted mb-0">Browse private islands, alpine chalets, and historic palaces available across your member tier.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <span class="badge bg-light text-dark border p-2"><i class="fa-solid fa-umbrella-beach text-sunset-gold me-1"></i> 6 Continents</span>
+          <span class="badge bg-light text-dark border p-2"><i class="fa-solid fa-award text-success me-1"></i> 100% Five-Star Verified</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Signature Luxury Havens Cards -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <h4 class="dashboard-card-title"><i class="fa-solid fa-earth-americas text-sunset-gold me-2"></i>Handpicked Destinations Portfolio</h4>
+        <span class="badge bg-primary-blue text-white">6 Destinations</span>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="p-3 border rounded-3 bg-light h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80" alt="Maldives" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <span class="badge bg-warning text-dark mb-2">Indian Ocean</span>
+              <h5 class="fw-bold text-primary-blue mb-1">Maldives Overwater Sanctuary</h5>
+              <p class="small text-muted mb-2">Private lagoon villas with private reef access and seaplane transfers.</p>
+              <div class="h5 fw-bold text-primary-blue mb-3">From $2,400 <span class="small text-muted fs-6">/ traveler</span></div>
+            </div>
+            <button type="button" class="btn btn-outline-wn btn-sm-wn w-100">Explore Sanctuary Details</button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-3 border rounded-3 bg-light h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80" alt="Swiss Alps" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <span class="badge bg-info text-white mb-2">Switzerland</span>
+              <h5 class="fw-bold text-primary-blue mb-1">Swiss Alpine Grandeur</h5>
+              <p class="small text-muted mb-2">Panoramic Matterhorn views, ski-in luxury chalets, and Michelin dining.</p>
+              <div class="h5 fw-bold text-primary-blue mb-3">From $1,850 <span class="small text-muted fs-6">/ traveler</span></div>
+            </div>
+            <button type="button" class="btn btn-outline-wn btn-sm-wn w-100">Explore Sanctuary Details</button>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-3 border rounded-3 bg-light h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 overflow-hidden mb-3" style="height: 160px;">
+                <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=600&q=80" alt="Santorini" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <span class="badge bg-success text-white mb-2">Greece</span>
+              <h5 class="fw-bold text-primary-blue mb-1">Santorini Sunset Romance</h5>
+              <p class="small text-muted mb-2">Cliffside infinity pools, volcanic caldera views, and catamaran charters.</p>
+              <div class="h5 fw-bold text-primary-blue mb-3">From $1,450 <span class="small text-muted fs-6">/ traveler</span></div>
+            </div>
+            <button type="button" class="btn btn-outline-wn btn-sm-wn w-100">Explore Sanctuary Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Seasonal Travel Climate & Peak Months Matrix -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <h4 class="dashboard-card-title"><i class="fa-solid fa-calendar-check text-sunset-gold me-2"></i>Global Seasonality & Optimal Travel Windows</h4>
+        <small class="text-muted">Avoid overcrowded periods with Stackly private reservation scheduling.</small>
+      </div>
+
+      <div class="table-responsive-wn">
+        <table class="table align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Haven Destination</th>
+              <th>Ideal Months</th>
+              <th>Weather Expectations</th>
+              <th>Prime Experience</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-bold text-primary-blue">Maldives Atolls</td>
+              <td>Nov &ndash; April</td>
+              <td>29°C &bull; Crystal calm water</td>
+              <td>Manta ray encounters & private sandbanks</td>
+              <td><span class="badge bg-success-subtle text-success">Prime Season</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-primary-blue">Swiss Alps (Zermatt)</td>
+              <td>Dec &ndash; March</td>
+              <td>-2°C to 4°C &bull; Powder snow</td>
+              <td>Glacier skiing & fireside fondues</td>
+              <td><span class="badge bg-info-subtle text-info">Winter Peak</span></td>
+            </tr>
+            <tr>
+              <td class="fw-bold text-primary-blue">Santorini & Oia</td>
+              <td>May &ndash; October</td>
+              <td>24°C &bull; Aegean sunshine</td>
+              <td>Private sunset yacht cruises</td>
+              <td><span class="badge bg-warning-subtle text-dark">High Demand</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Private Island & Remote Luxury Chalet Spotlight -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <h4 class="dashboard-card-title"><i class="fa-solid fa-crown text-primary-blue me-2"></i>Ultra-Private Havens Spotlight</h4>
+        <small class="text-muted">Exclusive buyout estates with private landing strips and dedicated domestic teams.</small>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="badge bg-warning text-dark fw-bold">Private Island Buyout</span>
+              <span class="small text-muted">Up to 24 Guests</span>
+            </div>
+            <h6 class="fw-bold text-primary-blue mb-1">Velaa Private Atoll (Noonu Atoll)</h6>
+            <p class="small text-muted mb-2">Complete island solitude, golf academy, submarine dive excursions, and three restaurants reserved solely for your party.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-primary-blue">$28,000 / night</span>
+              <button type="button" class="btn btn-sm btn-outline-wn">Inquire Buyout</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="badge bg-info text-white fw-bold">Alpine Chalet Estate</span>
+              <span class="small text-muted">Up to 14 Guests</span>
+            </div>
+            <h6 class="fw-bold text-primary-blue mb-1">Chalet Zermatt Peak (Matterhorn)</h6>
+            <p class="small text-muted mb-2">Awarded world's best ski chalet: private wellness spa, indoor-outdoor pool, cinema, and dedicated private Michelin chef team.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-primary-blue">$18,500 / night</span>
+              <button type="button" class="btn btn-sm btn-outline-wn">Inquire Buyout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Custom Destination Request & Private Flight Quote Form -->
+    <div class="dashboard-card">
+      <div class="dashboard-card-header">
+        <div>
+          <h4 class="dashboard-card-title"><i class="fa-solid fa-plane-departure text-primary-blue me-2"></i>Private Sanctuary & Flight Routing Request</h4>
+          <small class="text-muted">Need a bespoke haven not currently featured? Submit your preferences to your private travel curator.</small>
+        </div>
+      </div>
+
+      <form id="customDestinationRequestForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Desired Country / Region <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. French Riviera, Galapagos, Bora Bora" required>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Estimated Travel Dates <span class="text-danger">*</span></label>
+            <input type="date" class="form-control" required>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Accommodation Type <span class="text-danger">*</span></label>
+            <select class="form-select" required>
+              <option value="">Choose Accommodation...</option>
+              <option value="private-island">Private Island Buyout</option>
+              <option value="luxury-villa">Standalone Beachfront Villa</option>
+              <option value="ski-chalet">Ski-In Alpine Chalet</option>
+              <option value="palace-suite">Historic Palace Suite</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label small fw-bold">Custom Logistics & Concierge Requests <span class="text-danger">*</span></label>
+            <textarea class="form-control" rows="3" placeholder="Provide any details regarding private jet requirements, yacht day charters, security team, or specific resort brands..." required></textarea>
+          </div>
+
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary-wn px-4">
+              <i class="fa-solid fa-paper-plane me-1"></i> Submit Destination Request
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/user-dashboard.js"></script>
+  <script src="../js/dashboard-common.js"></script>
+</body>
+</html>

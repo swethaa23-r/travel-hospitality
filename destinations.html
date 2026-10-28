@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Destinations — Discover Hand-Crafted Travel Havens | Stackly</title>
+  <meta name="description" content="Explore Stackly's curated portfolio of iconic destinations across Europe, Asia, Africa, and the Indian Ocean. Filter by travel style, region, and budget.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Fixed Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content" data-aos="fade-up">
+      <h1 class="page-header-title">Curated Destinations</h1>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs text-white-50"></i>
+        <span>Destinations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Bar Section -->
+  <section class="py-4 bg-white border-bottom shadow-sm">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-3 align-items-center">
+        <!-- Search Keyword -->
+        <div class="col-lg-4 col-md-6">
+          <div class="input-group">
+            <span class="input-group-text bg-warm-ivory border-end-0 text-sunset-gold">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" id="destSearch" class="form-control bg-warm-ivory border-start-0" placeholder="Search by country, city, or style...">
+          </div>
+        </div>
+
+        <!-- Region Filter -->
+        <div class="col-lg-3 col-md-6">
+          <select id="regionFilter" class="form-select bg-warm-ivory">
+            <option value="">All Regions</option>
+            <option value="Europe">Europe</option>
+            <option value="Southeast Asia">Southeast Asia</option>
+            <option value="Asia">Asia / East Asia</option>
+            <option value="South Asia">South Asia</option>
+            <option value="Indian Ocean">Indian Ocean</option>
+            <option value="Africa">Africa</option>
+          </select>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="col-lg-3 col-md-6">
+          <select id="categoryFilter" class="form-select bg-warm-ivory">
+            <option value="">All Travel Styles</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Beach Holidays">Beach Holidays</option>
+            <option value="Luxury Travel">Luxury Travel</option>
+            <option value="Family Vacations">Family Vacations</option>
+            <option value="Honeymoon">Honeymoon</option>
+            <option value="Cultural Tours">Cultural Tours</option>
+          </select>
+        </div>
+
+        <!-- Budget Reset Action -->
+        <div class="col-lg-2 col-md-6">
+          <button class="btn btn-outline-wn w-100" onclick="resetDestFilters()">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Destination Cards Grid -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
+        <div>
+          <h3 class="text-primary-blue mb-1">Handpicked Luxury Sanctuaries</h3>
+          <p class="text-muted small mb-0">Showing premier destinations curated for authentic discovery.</p>
+        </div>
+      </div>
+
+      <!-- Grid populated by js/destinations.js -->
+      <div class="row g-4" id="destinationsGrid">
+        <!-- Rendered via js/destinations.js -->
+      </div>
+
+      <div class="text-center mt-5">
+        <button id="loadMoreDestinations" class="btn btn-primary-wn px-4">
+          <i class="fa-solid fa-circle-plus"></i> Load More Destinations
+        </button>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Section: Four-Season Travel Calendar -->
+  <section class="section-padding bg-white" id="seasonalCalendarSection">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+          <i class="fa-solid fa-calendar-days me-1"></i> When to Travel
+        </span>
+        <h2 class="display-6 fw-bold text-primary-blue mb-3">Curated Four-Season Travel Almanac</h2>
+        <p class="text-muted lead">Match your holiday rhythm with the planet's most magnificent seasonal phenomena and optimal climatic windows.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Spring -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <span class="badge bg-success text-white px-3 py-1 rounded-pill mb-3">Spring (Mar – May)</span>
+            <h5 class="fw-bold text-primary-blue mb-2">Kyoto & Amalfi Bloom</h5>
+            <p class="text-muted small mb-3">Peak Sakura blossoms across Kyoto's historic canals and lemon grove blooms along Italy's southern cliffside towns.</p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Avg Temp: 19°C – 23°C</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Ideal for: Cultural walking</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Crowd Index: Moderate</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Summer -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <span class="badge bg-sunset-gold text-white px-3 py-1 rounded-pill mb-3">Summer (Jun – Aug)</span>
+            <h5 class="fw-bold text-primary-blue mb-2">Santorini & Bali Sun</h5>
+            <p class="text-muted small mb-3">Dry, sunny trade winds in Bali and endless golden caldera sunsets with private catamaran anchorages across Greece.</p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Avg Temp: 28°C – 32°C</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Ideal for: Yachting & diving</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Crowd Index: Vibrant</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Autumn -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <span class="badge bg-warning text-dark px-3 py-1 rounded-pill mb-3">Autumn (Sep – Nov)</span>
+            <h5 class="fw-bold text-primary-blue mb-2">Swiss Harvest & Serengeti</h5>
+            <p class="text-muted small mb-3">Crisp alpine hiking beneath golden larches in Switzerland and dramatic predator encounters along the Mara River migration.</p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Avg Temp: 15°C – 22°C</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Ideal for: Wildlife & wine</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Crowd Index: Peaceful</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Winter -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <span class="badge bg-info text-white px-3 py-1 rounded-pill mb-3">Winter (Dec – Feb)</span>
+            <h5 class="fw-bold text-primary-blue mb-2">Maldives & Swiss Alps</h5>
+            <p class="text-muted small mb-3">Flawless powder snow across Zermatt's slopes, contrasted with glass-still lagoons and manta ray gatherings in the Maldives.</p>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Avg Temp: -4°C or +30°C</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Ideal for: Ski & reef diving</li>
+              <li><i class="fa-solid fa-check text-sunset-gold me-2"></i>Crowd Index: Festive High</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Private Atoll & Remote Sanctuary Collection -->
+  <section class="section-padding bg-warm-ivory" id="remoteSanctuariesSection">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-8" data-aos="fade-right">
+          <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+            <i class="fa-solid fa-earth-oceania me-1"></i> Off-Grid Grandeur
+          </span>
+          <h2 class="display-6 fw-bold text-primary-blue mb-2">Private Atolls & Secluded Sanctuaries</h2>
+          <p class="text-muted lead mb-0">Where privacy is absolute and horizons belong entirely to your party.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
+          <a href="contact.html" class="btn btn-outline-wn px-4 py-2">
+            <i class="fa-solid fa-key me-1"></i> Inquire Private Island Buyout
+          </a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=700&q=80" style="height: 220px; object-fit: cover;" alt="Bora Bora Atoll">
+            <div class="card-body p-4">
+              <span class="badge bg-sunset-gold text-white px-2 py-1 small rounded-pill mb-2">South Pacific</span>
+              <h5 class="fw-bold text-primary-blue mb-2">Motu Tane Sanctuary</h5>
+              <p class="text-muted small mb-3">Surrounded by turquoise barrier reefs, accessible only by private helicopter or yacht, offering 6 thatch-roof overwater pavilions.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top small">
+                <span class="text-muted">100% Carbon Neutral</span>
+                <a href="404.html" class="text-sunset-gold fw-bold text-decoration-none">Private Details &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80" style="height: 220px; object-fit: cover;" alt="Iceland Highlands">
+            <div class="card-body p-4">
+              <span class="badge bg-primary-blue text-white px-2 py-1 small rounded-pill mb-2">Arctic Highlands</span>
+              <h5 class="fw-bold text-primary-blue mb-2">Deplar Geothermal Estate</h5>
+              <p class="text-muted small mb-3">Tucked in Iceland's Troll Peninsula, complete with private geothermal hot springs, heli-skiing pad, and floor-to-ceiling aurora viewing suites.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top small">
+                <span class="text-muted">Aurora Borealis Front-Row</span>
+                <a href="404.html" class="text-sunset-gold fw-bold text-decoration-none">Private Details &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" style="height: 220px; object-fit: cover;" alt="Kerala Backwaters Sanctuary">
+            <div class="card-body p-4">
+              <span class="badge bg-sunset-gold text-white px-2 py-1 small rounded-pill mb-2">Malabar Coast</span>
+              <h5 class="fw-bold text-primary-blue mb-2">Vembanad Lotus Island</h5>
+              <p class="text-muted small mb-3">An emerald private island in Kerala's deepest lagoons, offering authentic Ayurvedic doctors, solar-powered houseboats, and organic spice dining.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top small">
+                <span class="text-muted">Holistic Wellness Haven</span>
+                <a href="404.html" class="text-sunset-gold fw-bold text-decoration-none">Private Details &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-padding bg-primary-blue text-white">
+    <div class="container text-center" data-aos="zoom-in">
+      <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-3">
+        <i class="fa-solid fa-map-location-dot me-1"></i> Destination Alerts
+      </span>
+      <h2 class="text-white display-6 fw-bold mb-3">Get Custom Guides Delivered to You</h2>
+      <p class="text-white-50 lead mx-auto mb-4" style="max-width: 600px;">
+        Subscribe to receive newly added private islands, secret villas, and seasonal flight schedules directly from our local curators.
+      </p>
+      <form class="newsletter-form d-flex flex-column flex-sm-row justify-content-center gap-2 mx-auto" style="max-width: 500px;">
+        <input type="email" class="form-control rounded-pill px-4" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary-wn flex-shrink-0">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="404.html">Amalfi Coast</a></li>
+            <li><a href="404.html">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">+91 90909 09090</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">info@stackly.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-white-50">FAQs</a>
+          <a href="404.html" class="text-white-50">Privacy Policy</a>
+          <a href="404.html" class="text-white-50">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>

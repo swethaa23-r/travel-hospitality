@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Services — White-Glove Concierge & Itinerary Design | Stackly</title>
+  <meta name="description" content="Discover Stackly's comprehensive suite of luxury travel services: custom holiday planning, 5-star resort reservations, private expeditions, and corporate retreats.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Fixed Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- 1. Services Hero -->
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content" data-aos="fade-up">
+      <h1 class="page-header-title">Our Concierge Services</h1>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs text-white-50"></i>
+        <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fa-solid fa-bell-concierge"></i> Comprehensive Care</span>
+        <h2 class="section-title">End-to-End Travel Excellence</h2>
+        <p class="section-description">Every element of your voyage is handled with meticulous attention to detail and personal discretion.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 2. Custom Holiday Planning -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-compass-drafting"></i></div>
+            <h3 class="feature-title">Custom Holiday Planning</h3>
+            <p class="feature-desc">Complete bespoke itinerary architecture designed around your personal dates, dietary preferences, and travel party dynamics.</p>
+          </div>
+        </div>
+
+        <!-- 3. Hotel Reservations -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-hotel"></i></div>
+            <h3 class="feature-title">Hotel & Resort Reservations</h3>
+            <p class="feature-desc">Priority booking, negotiated VIP rates, room upgrades upon availability, and complimentary spa and dining resort credits.</p>
+          </div>
+        </div>
+
+        <!-- 4. Flight Booking Assistance -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-plane-departure"></i></div>
+            <h3 class="feature-title">Flight Advisory Assistance</h3>
+            <p class="feature-desc">Dedicated concierge guidance on commercial business class routes, schedule optimization, and private charter liaison.</p>
+          </div>
+        </div>
+
+        <!-- 5. Adventure Travel -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-mountain"></i></div>
+            <h3 class="feature-title">Adventure & Alpine Expeditions</h3>
+            <p class="feature-desc">High-altitude mountaineering, heli-hiking, and glacier skiing managed alongside certified safety guides and medics.</p>
+          </div>
+        </div>
+
+        <!-- 6. Corporate Travel -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
+            <h3 class="feature-title">Corporate Executive Retreats</h3>
+            <p class="feature-desc">Private island buyouts, board meeting logistics, seamless AV technology in remote sanctuaries, and curated team bonding.</p>
+          </div>
+        </div>
+
+        <!-- 7. Honeymoon Packages -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-heart"></i></div>
+            <h3 class="feature-title">Honeymoon & Anniversary Escapes</h3>
+            <p class="feature-desc">Intimate cliffside cave villas, private sunset catamarans, candlelit beach dining, and couples holistic spa retreats.</p>
+          </div>
+        </div>
+
+        <!-- 8. Family Vacations -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-children"></i></div>
+            <h3 class="feature-title">Curated Family Vacations</h3>
+            <p class="feature-desc">Spacious multi-bedroom private villas, dedicated child-friendly concierges, wildlife safaris, and enriching junior cultural workshops.</p>
+          </div>
+        </div>
+
+        <!-- 9. Group Tours -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-users-rays"></i></div>
+            <h3 class="feature-title">Small-Group Private Tours</h3>
+            <p class="feature-desc">Exclusive private departures for groups of 6 to 14 guests with dedicated private motorcoaches, drivers, and guides.</p>
+          </div>
+        </div>
+
+        <!-- 10. Travel Insurance Assistance -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper"><i class="fa-solid fa-shield-virus"></i></div>
+            <h3 class="feature-title">Travel Insurance Advisory</h3>
+            <p class="feature-desc">Assistance connecting you with licensed global insurance underwriters for trip cancellation, medical evacuation, and baggage protection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FAQ Accordion for Services -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle"><i class="fa-solid fa-circle-question"></i> Good to Know</span>
+        <h2 class="section-title">Services Questions & Answers</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="accordion wn-accordion" id="serviceFaqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="sFaq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sCollapse1">
+                  How early should I begin planning a custom itinerary?
+                </button>
+              </h3>
+              <div id="sCollapse1" class="accordion-collapse collapse show" data-bs-parent="#serviceFaqAccordion">
+                <div class="accordion-body">
+                  For peak European summer destinations (Santorini, Amalfi) and festive Maldivian winter retreats, we recommend initiating planning 3 to 6 months in advance to secure top-tier villa categories.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="sFaq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sCollapse2">
+                  Can Stackly handle private jet charters or helicopter transfers?
+                </button>
+              </h3>
+              <div id="sCollapse2" class="accordion-collapse collapse" data-bs-parent="#serviceFaqAccordion">
+                <div class="accordion-body">
+                  Yes, our concierge team works directly with certified private aviation brokers across Europe, North America, and Asia to arrange seamless tarmac-to-tarmac transfers.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Call to Action -->
+  <section class="cta-section">
+    <div class="container position-relative" style="z-index: 2;" data-aos="zoom-in">
+      <h2 class="cta-title">Experience Flawless Hospitality</h2>
+      <p class="cta-desc">Allow our dedicated travel specialists to orchestrate every chapter of your next getaway.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="booking.html" class="btn btn-primary-wn btn-lg px-4"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+        <a href="contact.html" class="btn btn-white-wn btn-lg px-4"><i class="fa-solid fa-headset"></i> Contact Concierge</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="404.html">Amalfi Coast</a></li>
+            <li><a href="404.html">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">+91 90909 09090</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">info@stackly.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-white-50">FAQs</a>
+          <a href="404.html" class="text-white-50">Privacy Policy</a>
+          <a href="404.html" class="text-white-50">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

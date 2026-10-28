@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Reviews — Stackly Admin</title>
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin-layout">
+
+  <!-- Admin Sidebar (Strictly Internal Navigation) -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <div class="admin-brand-left">
+        <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img dashboard-sidebar-logo">
+        <span class="admin-badge">Admin</span>
+      </div>
+      <button type="button" class="admin-sidebar-close" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html" class="admin-nav-item">
+        <i class="fa-solid fa-gauge-high"></i> Dashboard
+      </a>
+      <a href="manage-bookings.html" class="admin-nav-item">
+        <i class="fa-solid fa-calendar-check"></i> Bookings
+      </a>
+      <a href="manage-destinations.html" class="admin-nav-item">
+        <i class="fa-solid fa-map-location-dot"></i> Destinations
+      </a>
+      <a href="manage-packages.html" class="admin-nav-item">
+        <i class="fa-solid fa-suitcase"></i> Tour Packages
+      </a>
+      <a href="manage-hotels.html" class="admin-nav-item">
+        <i class="fa-solid fa-hotel"></i> Hotels & Resorts
+      </a>
+      <a href="manage-users.html" class="admin-nav-item">
+        <i class="fa-solid fa-users"></i> Customers
+      </a>
+      <a href="manage-reviews.html" class="admin-nav-item active">
+        <i class="fa-solid fa-star-half-stroke"></i> Reviews
+      </a>
+    </nav>
+
+    <div class="p-3 border-top border-secondary border-opacity-25 mt-auto">
+      <a href="../login.html" class="admin-nav-item text-danger mt-1">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Admin Main -->
+  <main class="admin-main">
+    <!-- Topbar (Mobile: Logo + 3-line Hamburger only | Desktop: Search bar + Bell + Swetha Ramesh Profile Icon with Email & Password) -->
+    <header class="admin-topbar">
+      <!-- Mobile View (Logo + Hamburger only) -->
+      <div class="dashboard-mobile-header d-lg-none">
+        <a href="admin-dashboard.html" class="dashboard-mobile-logo">
+          <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img">
+          <span class="admin-badge">Admin</span>
+        </a>
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop View (Search + Bell + Profile Icon) -->
+      <div class="dashboard-desktop-header d-none d-lg-flex">
+        <!-- Search bar with Search Icon -->
+        <form class="dashboard-search-bar dashboard-search-form" id="dashboardSearchForm">
+          <button type="submit" class="border-0 bg-transparent p-0 text-muted" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+          <input type="text" placeholder="Search customer feedback, ratings, destination reviews...">
+        </form>
+
+        <!-- Right Side: Bell Icon + Profile -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Notification Bell Icon (Redirects to 404 on click) -->
+          <button class="dashboard-notif-btn" type="button" title="System Alerts">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- Profile in Top Right Corner (Icon only, No Image, Swetha Ramesh, Email & Password display) -->
+          <div class="dropdown">
+            <button class="dashboard-header-profile dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="dashboard-avatar-icon">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="dashboard-profile-text text-start">
+                <div class="profile-name">Swetha Ramesh</div>
+                <div class="profile-email">swetha.admin@stackly.com</div>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-3 profile-dropdown-menu" style="min-width: 310px;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom">
+                <div class="dashboard-avatar-icon large">
+                  <i class="fa-solid fa-circle-user fa-2x text-primary-blue"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold profile-name">Swetha Ramesh</h6>
+                  <span class="small text-muted profile-email">swetha.admin@stackly.com</span>
+                  <span class="badge bg-warning text-dark d-inline-block mt-1">Super Administrator</span>
+                </div>
+              </div>
+
+              <!-- Display Credentials (Email & Password) -->
+              <div class="mb-3 bg-light p-2 rounded border small">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted"><i class="fa-solid fa-envelope me-1"></i> Email ID:</span>
+                  <strong class="text-dark profile-email">swetha.admin@stackly.com</strong>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted"><i class="fa-solid fa-lock me-1"></i> Password:</span>
+                  <span class="badge bg-secondary-subtle text-dark border font-monospace">••••••••••••</span>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="manage-users.html" class="btn btn-sm btn-outline-wn">
+                  <i class="fa-solid fa-user-gear me-1"></i> Account Settings
+                </a>
+                <a href="../login.html" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Reviews Header & Quick Metrics -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h3 class="fw-bold text-primary-blue mb-1">Guest Reviews & Testimonials</h3>
+          <p class="text-muted mb-0">Approve, moderate, or filter verified traveler reviews before public display.</p>
+        </div>
+        <div>
+          <button class="btn btn-primary-wn btn-sm-wn">
+            <i class="fa-solid fa-check-double"></i> Batch Approve All
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Total Reviews</span>
+            <h4 class="fw-bold text-primary-blue mb-0">3 Logged</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Average Score</span>
+            <h4 class="fw-bold text-warning mb-0">4.7 / 5.0 ★</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Pending Approval</span>
+            <h4 class="fw-bold text-sunset-gold mb-0">1 Review</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Response SLA</span>
+            <h4 class="fw-bold text-success mb-0">100% On Time</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Reviews Table -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="table-responsive-wn">
+        <table class="table admin-table align-middle mb-0">
+          <thead>
+            <tr>
+              <th>Author</th>
+              <th>Destination</th>
+              <th>Rating</th>
+              <th>Comment Content</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adminReviewsTableBody">
+            <!-- Rendered via js/admin-dashboard.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Guest Feedback Sentiment Analysis & Net Promoter Score -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-chart-simple text-sunset-gold me-2"></i>Sentiment Analysis & Net Promoter Score (NPS)</h5>
+          <small class="text-muted">Real-time satisfaction sentiment extracted via traveler post-departure surveys.</small>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-wn"><i class="fa-solid fa-chart-pie me-1"></i> Detailed Sentiment PDF</button>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Net Promoter Score (NPS)</span>
+            <h4 class="fw-bold text-success my-1">+88</h4>
+            <div class="small text-muted">World-class hospitality benchmark</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">5-Star Feedback Share</span>
+            <h4 class="fw-bold text-warning my-1">92.4%</h4>
+            <div class="small text-muted"><i class="fa-solid fa-arrow-up text-success me-1"></i> +3.1% this quarter</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Concierge Issue Resolution</span>
+            <h4 class="fw-bold text-primary-blue my-1">100%</h4>
+            <div class="small text-muted">All inquiries resolved in &lt;1 hour</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Escalated Complaints</span>
+            <h4 class="fw-bold text-success my-1">0 Active</h4>
+            <div class="small text-muted">Zero pending disputes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Feedback Categories & Resolution SLA Breakdown -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="dashboard-card-header">
+        <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-tags text-primary-blue me-2"></i>Travel Experience Category Ratings</h5>
+        <small class="text-muted">Granular score breakdown across luxury hospitality pillars.</small>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Private Villa Comfort</span>
+            <h4 class="fw-bold text-primary-blue my-1">4.96 / 5.0</h4>
+            <div class="small text-success">Cleanliness & privacy score</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Michelin Dining Quality</span>
+            <h4 class="fw-bold text-primary-blue my-1">4.92 / 5.0</h4>
+            <div class="small text-success">Wine pairings & chef service</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Private Aviation / Transfers</span>
+            <h4 class="fw-bold text-primary-blue my-1">4.88 / 5.0</h4>
+            <div class="small text-success">Punctuality & luxury fleets</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Bespoke Concierge Attentiveness</span>
+            <h4 class="fw-bold text-primary-blue my-1">4.98 / 5.0</h4>
+            <div class="small text-success">Immediate request turnaround</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Automated Review Outreach Campaign Form -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border">
+      <div class="mb-3">
+        <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-paper-plane text-primary-blue me-2"></i>Post-Trip Review Outreach & Survey Campaign</h5>
+        <small class="text-muted">Dispatch feedback collection surveys to recently returned travelers with dining voucher rewards.</small>
+      </div>
+
+      <form id="reviewOutreachForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Campaign Title <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. Autumn 2026 Post-Departure Survey" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Target Cohort <span class="text-danger">*</span></label>
+            <select class="form-select" required>
+              <option value="">Select Traveler Segment...</option>
+              <option value="recent-departures">Travelers returned within last 7 days</option>
+              <option value="maldives-guests">Maldives Private Atoll Guests</option>
+              <option value="swiss-guests">Swiss Alps Luxury Guests</option>
+              <option value="vip-members">VIP Platinum Members Only</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Incentive Credit ($ USD) <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" placeholder="e.g. 150" min="50" max="500" required>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label small fw-bold">Custom Survey Invitation Message <span class="text-danger">*</span></label>
+            <textarea class="form-control" rows="3" placeholder="Dear Guest, we trust your journey with Stackly was exceptional. Please share 2 minutes of feedback to receive your dining reward credit..." required></textarea>
+          </div>
+
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary-wn px-4">
+              <i class="fa-solid fa-bullhorn me-1"></i> Launch Review Solicitation Campaign
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+  <script src="../js/dashboard-common.js"></script>
+</body>
+</html>

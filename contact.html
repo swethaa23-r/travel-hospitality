@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Our Travel Concierge — Inquiries & Consultations | Stackly</title>
+  <meta name="description" content="Get in touch with Stackly's destination designers for custom holiday inquiries, private villa buyouts, or luxury travel partnerships.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content" data-aos="fade-up">
+      <h1 class="page-header-title">Connect with Our Concierge</h1>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs text-white-50"></i>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information Cards -->
+  <section class="section-padding-sm bg-white border-bottom">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 bg-warm-ivory rounded-4 h-100 border">
+            <div class="feature-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-building"></i></div>
+            <h5 class="text-primary-blue mb-1">Office Address</h5>
+            <p class="small text-muted mb-0">MMR COMPLEX, CHINNA THIRUPATHI,<br>NEAR CHINNA MUNIYAPPAN KOVIL,<br>SALEM - 636 003</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 bg-warm-ivory rounded-4 h-100 border">
+            <div class="feature-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-phone"></i></div>
+            <h5 class="text-primary-blue mb-1">Direct Telephone</h5>
+            <p class="small text-muted mb-0"><a href="404.html" class="text-muted text-decoration-none">+91 90909 09090</a><br>(24/7 Support)</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 bg-warm-ivory rounded-4 h-100 border">
+            <div class="feature-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-envelope"></i></div>
+            <h5 class="text-primary-blue mb-1">Electronic Dispatch</h5>
+            <p class="small text-muted mb-0"><a href="404.html" class="text-muted text-decoration-none">info@stackly.com</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="p-4 bg-warm-ivory rounded-4 h-100 border">
+            <div class="feature-icon-wrapper mx-auto mb-3"><i class="fa-solid fa-clock"></i></div>
+            <h5 class="text-primary-blue mb-1">Operating Hours</h5>
+            <p class="small text-muted mb-0">Concierge: 24/7/365<br>Offices: Mon &ndash; Fri, 9am &ndash; 6pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Map Section -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Form Column -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+            <span class="section-subtitle"><i class="fa-solid fa-paper-plane"></i> Private Inquiries</span>
+            <h2 class="text-primary-blue mb-3">Send a Message to Our Travel Architects</h2>
+            <p class="text-muted small mb-4">
+              Please share your approximate travel dates, preferred destinations, or any special requests. Our concierge will review and reply within 24 hours.
+            </p>
+
+            <form id="travelContactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Full Name *</label>
+                  <input type="text" id="contactName" class="form-control" placeholder="e.g. Eleanor Bennett" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Email Address *</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="e.g. eleanor@example.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Telephone Number</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Inquiry Subject</label>
+                  <select id="contactSubject" class="form-select">
+                    <option value="Bespoke Itinerary Planning" selected>Bespoke Itinerary Planning</option>
+                    <option value="Luxury Hotel & Villa Booking">Luxury Hotel & Villa Booking</option>
+                    <option value="Private Yacht or Jet Charter">Private Yacht or Jet Charter</option>
+                    <option value="Corporate Retreat or Event">Corporate Retreat or Event</option>
+                    <option value="Existing Reservation Assistance">Existing Reservation Assistance</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">How May We Assist You? *</label>
+                  <textarea id="contactMessage" class="form-control" rows="4" placeholder="Tell us about your dream destination, party size, or dates..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-wn px-4 py-2">
+                    <i class="fa-solid fa-paper-plane"></i> Transmit Inquiry
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Office Map & Regional Details Column -->
+        <div class="col-lg-5" data-aos="fade-left">
+          <!-- Concierge Headquarters Location -->
+          <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+            <h5 class="text-primary-blue mb-3"><i class="fa-solid fa-map-location-dot text-sunset-gold me-2"></i> Concierge Headquarters</h5>
+            <div class="rounded-3 overflow-hidden position-relative border p-4 text-center d-flex flex-column justify-content-center align-items-center" style="min-height: 230px; background: linear-gradient(135deg, #123B52 0%, #1c5270 100%); color: white;">
+              <i class="fa-solid fa-location-dot fa-3x text-sunset-gold mb-2 animate-float"></i>
+              <h6 class="text-white mb-1 fw-bold">Stackly Headquarters</h6>
+              <p class="text-white-50 small mb-2">MMR COMPLEX, CHINNA THIRUPATHI,<br>NEAR CHINNA MUNIYAPPAN KOVIL,<br>SALEM - 636 003</p>
+              <div class="d-flex justify-content-center gap-2 mt-2">
+                <a href="404.html" class="btn btn-outline-light btn-sm rounded-pill"><i class="fa-solid fa-phone me-1"></i> Call Concierge</a>
+                <a href="404.html" class="btn btn-primary-wn btn-sm rounded-pill"><i class="fa-solid fa-envelope me-1"></i> Email Us</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick FAQ -->
+          <div class="bg-white p-4 rounded-4 shadow-sm border">
+            <h5 class="text-primary-blue mb-3">Frequently Asked Questions</h5>
+            <div class="accordion wn-accordion" id="contactMiniFaq">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="cMini1">
+                  <button class="accordion-button fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#cCollapse1">
+                    What is your turnaround response time?
+                  </button>
+                </h2>
+                <div id="cCollapse1" class="accordion-collapse collapse show" data-bs-parent="#contactMiniFaq">
+                  <div class="accordion-body small">
+                    Our concierge team typically reviews and replies to all tailored inquiries within 12 to 24 business hours.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="cMini2">
+                  <button class="accordion-button collapsed fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#cCollapse2">
+                    Do you charge an upfront consultation fee?
+                  </button>
+                </h2>
+                <div id="cCollapse2" class="accordion-collapse collapse" data-bs-parent="#contactMiniFaq">
+                  <div class="accordion-body small">
+                    No. Initial itinerary design consultations and custom proposals are complimentary for all prospective guests.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+  <!-- Section: Global Regional Concierge Desks -->
+  <section class="section-padding bg-white" id="globalDesksSection">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+          <i class="fa-solid fa-earth-americas me-1"></i> Worldwide Presence
+        </span>
+        <h2 class="display-6 fw-bold text-primary-blue mb-3">Global Regional Concierge Desks</h2>
+        <p class="text-muted lead">Direct local assistance in key international hubs. Our team is physically on the ground to oversee your arrival and experience.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Zurich -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary-blue text-white px-2 py-1 rounded-pill small">Central Europe</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-dot me-1"></i>Open</span>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-1">Zurich Office</h5>
+            <p class="small text-muted mb-3">Bahnhofstrasse 45, 8001 Zurich, Switzerland</p>
+            <div class="small text-muted border-top pt-2">
+              <div><i class="fa-solid fa-phone text-sunset-gold me-2"></i>+41 44 210 9988</div>
+              <div><i class="fa-solid fa-clock text-sunset-gold me-2"></i>08:00 – 20:00 CET</div>
+            </div>
+          </div>
+        </div>
+        <!-- Tokyo -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-sunset-gold text-white px-2 py-1 rounded-pill small">East Asia</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-dot me-1"></i>Open</span>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-1">Tokyo Liaison</h5>
+            <p class="small text-muted mb-3">Roppongi Hills Mori Tower, Minato-ku, Tokyo</p>
+            <div class="small text-muted border-top pt-2">
+              <div><i class="fa-solid fa-phone text-sunset-gold me-2"></i>+81 3 5549 0122</div>
+              <div><i class="fa-solid fa-clock text-sunset-gold me-2"></i>09:00 – 21:00 JST</div>
+            </div>
+          </div>
+        </div>
+        <!-- New York -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary-blue text-white px-2 py-1 rounded-pill small">Americas Hub</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-dot me-1"></i>Open</span>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-1">New York Suite</h5>
+            <p class="small text-muted mb-3">590 Madison Avenue, 24th Fl, New York, NY 10022</p>
+            <div class="small text-muted border-top pt-2">
+              <div><i class="fa-solid fa-phone text-sunset-gold me-2"></i>+1 (212) 890-4450</div>
+              <div><i class="fa-solid fa-clock text-sunset-gold me-2"></i>08:00 – 19:00 EST</div>
+            </div>
+          </div>
+        </div>
+        <!-- Bali -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="p-4 bg-warm-ivory rounded-4 border h-100 hover-lift">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-sunset-gold text-white px-2 py-1 rounded-pill small">Asia-Pacific</span>
+              <span class="badge bg-success-subtle text-success small"><i class="fa-solid fa-circle-dot me-1"></i>Open</span>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-1">Bali Operations</h5>
+            <p class="small text-muted mb-3">Jalan Raya Seminyak 14B, Badung, Bali 80361</p>
+            <div class="small text-muted border-top pt-2">
+              <div><i class="fa-solid fa-phone text-sunset-gold me-2"></i>+62 361 734 990</div>
+              <div><i class="fa-solid fa-clock text-sunset-gold me-2"></i>08:00 – 22:00 WITA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Private Video Consultation Appointment Booking -->
+  <section class="section-padding bg-warm-ivory" id="consultationBookingSection">
+    <div class="container">
+      <div class="bg-primary-blue text-white rounded-4 p-4 p-md-5 shadow-lg" data-aos="zoom-in">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-3">
+              <i class="fa-solid fa-video me-1"></i> Face-to-Face Itinerary Planning
+            </span>
+            <h3 class="display-6 fw-bold mb-3">Schedule a 1-on-1 Video Consultation</h3>
+            <p class="text-white-50 lead mb-0">Speak directly with our senior destination architect over a 30-minute private video call. We will review flight routing, villa selections, and bespoke pacing live on screen.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <button class="btn btn-sunset-gold text-white btn-lg px-4 py-3 fw-bold shadow" onclick="showWnNotification('Consultation Scheduled', 'A concierge appointment invite has been prepared. Our team will coordinate your preferred video slot.', 'success')">
+              <i class="fa-solid fa-calendar-check me-2"></i> Book Video Meeting
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="404.html">Amalfi Coast</a></li>
+            <li><a href="404.html">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">+91 90909 09090</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">info@stackly.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-white-50">FAQs</a>
+          <a href="404.html" class="text-white-50">Privacy Policy</a>
+          <a href="404.html" class="text-white-50">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

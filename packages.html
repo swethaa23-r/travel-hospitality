@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages — Curated Multi-Day Luxury Itineraries | Stackly</title>
+  <meta name="description" content="Discover hand-crafted all-inclusive luxury holiday packages across Bali, Switzerland, Greece, Maldives, Kyoto, and Kerala. Filter by style and budget.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content" data-aos="fade-up">
+      <h1 class="page-header-title">Signature Tour Packages</h1>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs text-white-50"></i>
+        <span>Tour Packages</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Toolbar -->
+  <section class="py-4 bg-white border-bottom shadow-sm">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-3 align-items-center">
+        <!-- Search Keyword -->
+        <div class="col-lg-3 col-md-6">
+          <div class="input-group">
+            <span class="input-group-text bg-warm-ivory border-end-0 text-sunset-gold">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" id="packageSearch" class="form-control bg-warm-ivory border-start-0" placeholder="Search tour or destination...">
+          </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="col-lg-2 col-md-6">
+          <select id="pkgCategoryFilter" class="form-select bg-warm-ivory">
+            <option value="">All Categories</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Beach Holidays">Beach Holidays</option>
+            <option value="Luxury Travel">Luxury Travel</option>
+            <option value="Family Vacations">Family Vacations</option>
+            <option value="Honeymoon">Honeymoon</option>
+            <option value="Cultural Tours">Cultural Tours</option>
+          </select>
+        </div>
+
+        <!-- Duration Filter -->
+        <div class="col-lg-2 col-md-6">
+          <select id="pkgDurationFilter" class="form-select bg-warm-ivory">
+            <option value="">Any Duration</option>
+            <option value="short">1 - 5 Days</option>
+            <option value="medium">6 - 8 Days</option>
+            <option value="long">9+ Days</option>
+          </select>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="col-lg-3 col-md-6">
+          <select id="pkgSortSelect" class="form-select bg-warm-ivory">
+            <option value="featured">Sort: Featured First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Guest Rating: Highest</option>
+          </select>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="col-lg-2 col-md-12">
+          <button class="btn btn-outline-wn w-100" onclick="resetPkgFilters()">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tour Packages Grid -->
+  <section class="section-padding bg-warm-ivory">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
+        <div>
+          <h3 class="text-primary-blue mb-1">Available Curated Journeys</h3>
+          <p class="text-muted small mb-0">Transparent pricing including boutique stays, private transit, and local guides.</p>
+        </div>
+      </div>
+
+      <div class="row g-4" id="packagesGrid">
+        <!-- Rendered by js/packages.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotional Banner -->
+  <section class="section-padding-sm bg-white">
+    <div class="container" data-aos="zoom-in">
+      <div class="offer-banner p-4 p-md-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">Private Group Departures</span>
+            <h3 class="text-white mb-2">Looking to Travel with Family or Close Friends?</h3>
+            <p class="text-white-50 mb-0">Our bespoke group team customizes any of these journeys exclusively for your party of 6 or more.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <a href="contact.html" class="btn btn-primary-wn">Inquire Private Departure</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+  <!-- Section: The Stackly All-Inclusive Standard -->
+  <section class="section-padding bg-warm-ivory" id="inclusiveStandardSection">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+        <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+          <i class="fa-solid fa-certificate me-1"></i> The Stackly Standard
+        </span>
+        <h2 class="display-6 fw-bold text-primary-blue mb-3">What Every Luxury Package Includes</h2>
+        <p class="text-muted lead">No hidden resort fees, no fine print. Transparent ultra-luxury inclusions guaranteed across every itinerary.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 58px; height: 58px; font-size: 1.5rem;">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Private Chauffeur Transit</h5>
+            <p class="text-muted small mb-0">Mercedes Maybach or luxury electric vehicle airport transfers and daily private chauffeur availability during all excursions.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 58px; height: 58px; font-size: 1.5rem;">
+              <i class="fa-solid fa-bed"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Premier Suite Accommodations</h5>
+            <p class="text-muted small mb-0">Handpicked luxury 5-star suites and cliffside villas verified for exceptional acoustic privacy and sweeping panoramic views.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 58px; height: 58px; font-size: 1.5rem;">
+              <i class="fa-solid fa-wine-glass"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Michelin & Fine Dining</h5>
+            <p class="text-muted small mb-0">Full daily breakfast, chef table reservations, and generous dining credits at top-rated local establishments included in your fare.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 58px; height: 58px; font-size: 1.5rem;">
+              <i class="fa-solid fa-person-walking-luggage"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Dedicated Local Host</h5>
+            <p class="text-muted small mb-0">An expert local culture curator accompanying your group, unlocking private museum doors and behind-the-scenes access.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 58px; height: 58px; font-size: 1.5rem;">
+              <i class="fa-solid fa-ticket"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Skip-the-Line Priority</h5>
+            <p class="text-muted small mb-0">Pre-booked VIP entry passes for all historical monuments, cable cars, national park permits, and harbor berths.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="bg-white p-4 rounded-4 shadow-sm h-100 border hover-lift">
+            <div class="rounded-circle bg-warm-ivory text-sunset-gold d-inline-flex align-items-center justify-content-center mb-3" style="width: 58px; height: 58px; font-size: 1.5rem;">
+              <i class="fa-solid fa-umbrella"></i>
+            </div>
+            <h5 class="fw-bold text-primary-blue mb-2">Global Travel Shield</h5>
+            <p class="text-muted small mb-0">Comprehensive international travel insurance, luggage protection, and round-the-clock emergency assistance throughout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Bespoke Transcontinental Grand Tours -->
+  <section class="section-padding bg-white" id="grandToursSection">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-8" data-aos="fade-right">
+          <span class="badge bg-sunset-gold text-white px-3 py-2 rounded-pill mb-2">
+            <i class="fa-solid fa-route me-1"></i> Multi-Country Expeditions
+          </span>
+          <h2 class="display-6 fw-bold text-primary-blue mb-2">Signature Transcontinental Grand Tours</h2>
+          <p class="text-muted lead mb-0">Combine multiple iconic world regions seamlessly with interconnected private charters and coordinated concierge transfers.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0" data-aos="fade-left">
+          <a href="contact.html" class="btn btn-primary-wn px-4 py-2">
+            <i class="fa-solid fa-pencil me-1"></i> Request Custom Route
+          </a>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <div class="position-relative" style="height: 230px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Alpine and Mediterranean">
+              <span class="position-absolute top-0 start-0 m-3 badge bg-primary-blue text-white px-3 py-2 rounded-pill">14 Days / 3 Countries</span>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold text-primary-blue mb-1">Alpine & Mediterranean Odyssey</h5>
+              <p class="small text-muted mb-3"><i class="fa-solid fa-map-pin text-sunset-gold me-1"></i> Switzerland &rarr; Amalfi Coast &rarr; Santorini</p>
+              <p class="text-muted small mb-3">Scenic Glacier Express rail across Swiss peaks, followed by private yachting along Amalfi's lemon cliffs and sunset caldera dining in Oia.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-primary-blue">From $6,450 <small class="text-muted fw-normal">/ guest</small></span>
+                <a href="booking.html" class="btn btn-sm btn-outline-wn">Explore &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <div class="position-relative" style="height: 230px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="Silk Route Expedition">
+              <span class="position-absolute top-0 start-0 m-3 badge bg-sunset-gold text-white px-3 py-2 rounded-pill">16 Days / 3 Nations</span>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold text-primary-blue mb-1">Cherry Blossom & Tropical Reef</h5>
+              <p class="small text-muted mb-3"><i class="fa-solid fa-map-pin text-sunset-gold me-1"></i> Kyoto &rarr; Bali &rarr; Singapore Marina</p>
+              <p class="text-muted small mb-3">Traditional tea ceremonies in historic Kyoto ryokans, private wellness sanctum in Ubud rice terraces, and penthouse stays at Marina Bay.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-primary-blue">From $7,200 <small class="text-muted fw-normal">/ guest</small></span>
+                <a href="booking.html" class="btn btn-sm btn-outline-wn">Explore &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-lift">
+            <div class="position-relative" style="height: 230px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=800&q=80" class="w-100 h-100 object-fit-cover" alt="African Wilderness and Atoll">
+              <span class="position-absolute top-0 start-0 m-3 badge bg-primary-blue text-white px-3 py-2 rounded-pill">12 Days / 2 Dest</span>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="fw-bold text-primary-blue mb-1">Wilderness Safari & Atoll Solitude</h5>
+              <p class="small text-muted mb-3"><i class="fa-solid fa-map-pin text-sunset-gold me-1"></i> Serengeti Safari &rarr; Maldives Overwater</p>
+              <p class="text-muted small mb-3">Exclusive tented camps following lion prides in the Serengeti, seamlessly transitioning to a private water villa in the Baa Atoll biosphere.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-primary-blue">From $8,900 <small class="text-muted fw-normal">/ guest</small></span>
+                <a href="booking.html" class="btn btn-sm btn-outline-wn">Explore &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="404.html">Amalfi Coast</a></li>
+            <li><a href="404.html">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">+91 90909 09090</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">info@stackly.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-white-50">FAQs</a>
+          <a href="404.html" class="text-white-50">Privacy Policy</a>
+          <a href="404.html" class="text-white-50">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/packages.js"></script>
+</body>
+</html>

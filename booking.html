@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Your Journey — Multi-Step Luxury Booking | Stackly</title>
+  <meta name="description" content="Plan and reserve your bespoke holiday package, private villa, or luxury experience with Stackly's interactive reservation wizard.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="wn-navbar d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand-wn" href="index.html">
+          <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img">
+        </a>
+
+                <ul class="desktop-nav-menu">
+          <li>
+            <a class="nav-link-wn" href="index.html">
+              <i class="nav-icon fa-solid fa-compass"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="about.html">
+              <i class="nav-icon fa-solid fa-earth-americas"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="destinations.html">
+              <i class="nav-icon fa-solid fa-location-dot"></i>
+              <span>Destinations</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="packages.html">
+              <i class="nav-icon fa-solid fa-suitcase-rolling"></i>
+              <span>Packages</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="services.html">
+              <i class="nav-icon fa-solid fa-bell-concierge"></i>
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="blog.html">
+              <i class="nav-icon fa-solid fa-feather-pointed"></i>
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link-wn" href="contact.html">
+              <i class="nav-icon fa-solid fa-headset"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="desktop-nav-actions">
+          <a class="nav-login-btn" href="login.html">
+            <i class="fa-solid fa-arrow-right-to-bracket nav-icon"></i>
+            <span>Login</span>
+          </a>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-drawer-header">
+      <a class="navbar-brand-wn fs-5" href="index.html">
+        <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img brand-logo-mobile">
+      </a>
+      <button class="mobile-drawer-close" aria-label="Close mobile navigation">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+        <div class="mobile-drawer-body">
+      <a class="mobile-drawer-link" href="index.html"><i class="fa-solid fa-compass"></i> Home</a>
+      <a class="mobile-drawer-link" href="about.html"><i class="fa-solid fa-earth-americas"></i> About</a>
+      <a class="mobile-drawer-link" href="destinations.html"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+      <a class="mobile-drawer-link" href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a>
+      <a class="mobile-drawer-link" href="services.html"><i class="fa-solid fa-bell-concierge"></i> Services</a>
+      <a class="mobile-drawer-link" href="blog.html"><i class="fa-solid fa-feather-pointed"></i> Blog</a>
+      <a class="mobile-drawer-link" href="contact.html"><i class="fa-solid fa-headset"></i> Contact</a>
+      <hr class="my-2">
+      <a class="mobile-drawer-link" href="login.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+    </div>
+  </aside>
+
+  <!-- Hero Header -->
+  <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-header-overlay"></div>
+    <div class="container page-header-content">
+      <h1 class="page-header-title">Reserve Your Journey</h1>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right fa-xs text-white-50"></i>
+        <span>Travel Booking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Step Booking Wizard Interface -->
+  <section class="section-padding bg-warm-ivory" id="bookingWizard">
+    <div class="container">
+      <!-- Step Indicator Bar -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+          <div class="d-flex justify-content-between position-relative px-2">
+            <div class="wizard-step-item text-center flex-fill active" data-step="1">
+              <div class="wizard-step-circle mx-auto mb-2"><i class="fa-solid fa-suitcase"></i></div>
+              <span class="small fw-bold d-none d-md-block">1. Package</span>
+            </div>
+            <div class="wizard-step-item text-center flex-fill" data-step="2">
+              <div class="wizard-step-circle mx-auto mb-2"><i class="fa-solid fa-calendar-day"></i></div>
+              <span class="small fw-bold d-none d-md-block">2. Dates</span>
+            </div>
+            <div class="wizard-step-item text-center flex-fill" data-step="3">
+              <div class="wizard-step-circle mx-auto mb-2"><i class="fa-solid fa-user-group"></i></div>
+              <span class="small fw-bold d-none d-md-block">3. Guests</span>
+            </div>
+            <div class="wizard-step-item text-center flex-fill" data-step="4">
+              <div class="wizard-step-circle mx-auto mb-2"><i class="fa-solid fa-address-card"></i></div>
+              <span class="small fw-bold d-none d-md-block">4. Details</span>
+            </div>
+            <div class="wizard-step-item text-center flex-fill" data-step="5">
+              <div class="wizard-step-circle mx-auto mb-2"><i class="fa-solid fa-receipt"></i></div>
+              <span class="small fw-bold d-none d-md-block">5. Review</span>
+            </div>
+            <div class="wizard-step-item text-center flex-fill" data-step="6">
+              <div class="wizard-step-circle mx-auto mb-2"><i class="fa-solid fa-circle-check"></i></div>
+              <span class="small fw-bold d-none d-md-block">6. Confirmed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Wizard Form Area & Sticky Summary Sidebar -->
+      <div class="row g-4">
+        <!-- Wizard Steps Panel Container -->
+        <div class="col-lg-8">
+          <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
+            <!-- STEP 1: Select Package -->
+            <div class="wizard-panel" data-step="1">
+              <h3 class="text-primary-blue mb-1">Step 1: Select Tour Package</h3>
+              <p class="text-muted small mb-4">Choose from our curated hand-crafted holiday itineraries.</p>
+              
+              <div class="row g-3" id="stepPackageSelect">
+                <!-- Injected via js/booking.js -->
+              </div>
+
+              <div class="mt-4 text-end">
+                <button type="button" class="btn btn-primary-wn btn-wizard-next">
+                  Continue to Travel Dates <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Select Dates -->
+            <div class="wizard-panel d-none" data-step="2">
+              <h3 class="text-primary-blue mb-1">Step 2: Choose Your Travel Dates</h3>
+              <p class="text-muted small mb-4">Select your intended arrival departure date.</p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Departure / Check-in Date *</label>
+                  <input type="date" id="bookingCheckInDate" class="form-control" required min="2026-10-24">
+                  <small class="text-muted">Standard check-in begins at 15:00.</small>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold small">Return / Check-out Date</label>
+                  <input type="date" id="bookingCheckOutDate" class="form-control" min="2026-10-24">
+                  <small class="text-muted">Optional: Auto-calculated based on package duration.</small>
+                </div>
+              </div>
+
+              <div class="p-3 bg-warm-ivory rounded-3 border mt-4">
+                <i class="fa-solid fa-umbrella-beach text-sunset-gold me-2"></i>
+                <span class="small text-muted"><strong>Flexible Change Guarantee:</strong> Penalty-free date shifts are available up to 30 days before departure.</span>
+              </div>
+
+              <div class="mt-5 d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-wn btn-wizard-prev">
+                  <i class="fa-solid fa-arrow-left me-1"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary-wn btn-wizard-next">
+                  Continue to Travelers <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Travelers Count -->
+            <div class="wizard-panel d-none" data-step="3">
+              <h3 class="text-primary-blue mb-1">Step 3: Number of Travelers</h3>
+              <p class="text-muted small mb-4">Pricing updates live based on your party size.</p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="p-3 bg-warm-ivory rounded-4 border">
+                    <label class="form-label fw-bold text-primary-blue mb-1">Adult Travelers (12+ yrs)</label>
+                    <p class="small text-muted mb-3">Full package inclusions & suite accommodations.</p>
+                    <select id="bookingAdults" class="form-select">
+                      <option value="1">1 Adult (Solo Explorer)</option>
+                      <option value="2" selected>2 Adults (Couples / Duo)</option>
+                      <option value="3">3 Adults</option>
+                      <option value="4">4 Adults</option>
+                      <option value="5">5 Adults</option>
+                      <option value="6">6 Adults</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-3 bg-warm-ivory rounded-4 border">
+                    <label class="form-label fw-bold text-primary-blue mb-1">Children (2-11 yrs)</label>
+                    <p class="small text-muted mb-3">50% discount on ground tour rates.</p>
+                    <select id="bookingChildren" class="form-select">
+                      <option value="0" selected>0 Children</option>
+                      <option value="1">1 Child</option>
+                      <option value="2">2 Children</option>
+                      <option value="3">3 Children</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-wn btn-wizard-prev">
+                  <i class="fa-solid fa-arrow-left me-1"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary-wn btn-wizard-next">
+                  Enter Contact Details <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Traveler Details -->
+            <div class="wizard-panel d-none" data-step="4">
+              <h3 class="text-primary-blue mb-1">Step 4: Lead Traveler Information</h3>
+              <p class="text-muted small mb-4">Required for reservations, permits, and private transfers.</p>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Full Legal Name *</label>
+                  <input type="text" id="guestFullName" class="form-control" placeholder="As shown on passport" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Email Address *</label>
+                  <input type="email" id="guestEmail" class="form-control" placeholder="For itinerary dispatch" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Phone Number *</label>
+                  <input type="tel" id="guestPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Emergency Contact Name & Phone</label>
+                  <input type="text" id="guestEmergency" class="form-control" placeholder="Name and international phone">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small fw-bold">Dietary or Special Accommodations</label>
+                  <textarea id="guestSpecialRequests" class="form-control" rows="3" placeholder="Allergies, honeymoon celebration, twin bed preference, etc."></textarea>
+                </div>
+              </div>
+
+              <div class="mt-5 d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-wn btn-wizard-prev">
+                  <i class="fa-solid fa-arrow-left me-1"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary-wn btn-wizard-next">
+                  Review & Confirm <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 5: Review Booking -->
+            <div class="wizard-panel d-none" data-step="5">
+              <h3 class="text-primary-blue mb-1">Step 5: Review Booking Details</h3>
+              <p class="text-muted small mb-4">Please verify all itinerary and traveler details before completing demo confirmation.</p>
+
+              <div class="p-4 bg-warm-ivory rounded-4 border mb-4" id="bookingReviewDetails">
+                <!-- Injected via js/booking.js -->
+              </div>
+
+              <div class="p-3 bg-light rounded-3 border mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="agreeBookingTerms" required>
+                  <label class="form-check-label small text-muted" for="agreeBookingTerms">
+                    I agree to the Stackly <a href="404.html" class="text-sunset-gold">Terms of Service</a>, Cancellation Policies, and verify that this is a frontend demonstration booking.
+                  </label>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-wn btn-wizard-prev">
+                  <i class="fa-solid fa-arrow-left me-1"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary-wn btn-wizard-next">
+                  <i class="fa-solid fa-lock me-1"></i> Complete Demo Reservation
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 6: Confirmation -->
+            <div class="wizard-panel d-none" data-step="6">
+              <div id="bookingConfirmationDetails">
+                <!-- Injected via js/booking.js upon completion -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Live Pricing Summary Sidebar -->
+        <div class="col-lg-4">
+          <div class="sticky-info-card">
+            <h5 class="text-primary-blue mb-3 pb-2 border-bottom">Booking Summary</h5>
+            <div id="bookingSummaryCard">
+              <!-- Rendered via js/booking.js -->
+            </div>
+
+            <div class="alert alert-warning-subtle border small mt-4 mb-0">
+              <i class="fa-solid fa-circle-info text-warning me-1"></i>
+              <strong>Frontend Demonstration:</strong> No real payment card is charged. Booking references persist to local browser storage and display inside your customer dashboard.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="wn-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <img src="logo.webp" alt="Stackly Travel & Hospitality" class="brand-logo-img footer-logo-img">
+          </a>
+          <p class="footer-about-text">
+            Stackly is an internationally acclaimed luxury travel and hospitality brand dedicated to hand-crafting immersive holidays, boutique resort reservations, and transformative global experiences.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Top Destinations -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="404.html">Bali, Indonesia</a></li>
+            <li><a href="404.html">Swiss Alps</a></li>
+            <li><a href="404.html">Santorini, Greece</a></li>
+            <li><a href="404.html">Maldives Atolls</a></li>
+            <li><a href="404.html">Kyoto, Japan</a></li>
+            <li><a href="404.html">Kerala Backwaters</a></li>
+            <li><a href="404.html">Amalfi Coast</a></li>
+            <li><a href="404.html">Serengeti Safari</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support & Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Concierge Office</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>MMR COMPLEX, CHINNA THIRUPATHI, NEAR CHINNA MUNIYAPPAN KOVIL, SALEM - 636 003</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">+91 90909 09090</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span><a href="404.html" class="text-white-50 text-decoration-none">info@stackly.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <p class="mb-0 text-white-50">
+          &copy; 2026 Stackly Luxury Travel Ltd. All rights reserved. Built for discerning travelers.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="404.html" class="text-white-50">FAQs</a>
+          <a href="404.html" class="text-white-50">Privacy Policy</a>
+          <a href="404.html" class="text-white-50">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* Wizard Steps Circle Styling */
+    .wizard-step-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+    .wizard-step-item.active .wizard-step-circle {
+      background: var(--sunset-gold);
+      border-color: var(--sunset-gold);
+      color: var(--white);
+      box-shadow: 0 4px 15px rgba(233,162,59,0.4);
+    }
+    .wizard-step-item.completed .wizard-step-circle {
+      background: var(--primary-blue);
+      border-color: var(--primary-blue);
+      color: var(--white);
+    }
+    .wizard-step-item.active span,
+    .wizard-step-item.completed span {
+      color: var(--primary-blue) !important;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/data.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

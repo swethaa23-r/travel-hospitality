@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Customers — Stackly Admin</title>
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin-layout">
+
+  <!-- Admin Sidebar (Strictly Internal Navigation) -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <div class="admin-brand-left">
+        <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img dashboard-sidebar-logo">
+        <span class="admin-badge">Admin</span>
+      </div>
+      <button type="button" class="admin-sidebar-close" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html" class="admin-nav-item">
+        <i class="fa-solid fa-gauge-high"></i> Dashboard
+      </a>
+      <a href="manage-bookings.html" class="admin-nav-item">
+        <i class="fa-solid fa-calendar-check"></i> Bookings
+      </a>
+      <a href="manage-destinations.html" class="admin-nav-item">
+        <i class="fa-solid fa-map-location-dot"></i> Destinations
+      </a>
+      <a href="manage-packages.html" class="admin-nav-item">
+        <i class="fa-solid fa-suitcase"></i> Tour Packages
+      </a>
+      <a href="manage-hotels.html" class="admin-nav-item">
+        <i class="fa-solid fa-hotel"></i> Hotels & Resorts
+      </a>
+      <a href="manage-users.html" class="admin-nav-item active">
+        <i class="fa-solid fa-users"></i> Customers
+      </a>
+      <a href="manage-reviews.html" class="admin-nav-item">
+        <i class="fa-solid fa-star-half-stroke"></i> Reviews
+      </a>
+    </nav>
+
+    <div class="p-3 border-top border-secondary border-opacity-25 mt-auto">
+      <a href="../login.html" class="admin-nav-item text-danger mt-1">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Admin Main -->
+  <main class="admin-main">
+    <!-- Topbar (Mobile: Logo + 3-line Hamburger only | Desktop: Search bar + Bell + Swetha Ramesh Profile Icon with Email & Password) -->
+    <header class="admin-topbar">
+      <!-- Mobile View (Logo + Hamburger only) -->
+      <div class="dashboard-mobile-header d-lg-none">
+        <a href="admin-dashboard.html" class="dashboard-mobile-logo">
+          <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img">
+          <span class="admin-badge">Admin</span>
+        </a>
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop View (Search + Bell + Profile Icon) -->
+      <div class="dashboard-desktop-header d-none d-lg-flex">
+        <!-- Search bar with Search Icon -->
+        <form class="dashboard-search-bar dashboard-search-form" id="dashboardSearchForm">
+          <button type="submit" class="border-0 bg-transparent p-0 text-muted" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+          <input type="text" placeholder="Search customer records, VIP memberships, emails...">
+        </form>
+
+        <!-- Right Side: Bell Icon + Profile -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Notification Bell Icon (Redirects to 404 on click) -->
+          <button class="dashboard-notif-btn" type="button" title="System Alerts">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- Profile in Top Right Corner (Icon only, No Image, Swetha Ramesh, Email & Password display) -->
+          <div class="dropdown">
+            <button class="dashboard-header-profile dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="dashboard-avatar-icon">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="dashboard-profile-text text-start">
+                <div class="profile-name">Swetha Ramesh</div>
+                <div class="profile-email">swetha.admin@stackly.com</div>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-3 profile-dropdown-menu" style="min-width: 310px;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom">
+                <div class="dashboard-avatar-icon large">
+                  <i class="fa-solid fa-circle-user fa-2x text-primary-blue"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold profile-name">Swetha Ramesh</h6>
+                  <span class="small text-muted profile-email">swetha.admin@stackly.com</span>
+                  <span class="badge bg-warning text-dark d-inline-block mt-1">Super Administrator</span>
+                </div>
+              </div>
+
+              <!-- Display Credentials (Email & Password) -->
+              <div class="mb-3 bg-light p-2 rounded border small">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted"><i class="fa-solid fa-envelope me-1"></i> Email ID:</span>
+                  <strong class="text-dark profile-email">swetha.admin@stackly.com</strong>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted"><i class="fa-solid fa-lock me-1"></i> Password:</span>
+                  <span class="badge bg-secondary-subtle text-dark border font-monospace">••••••••••••</span>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="manage-users.html" class="btn btn-sm btn-outline-wn">
+                  <i class="fa-solid fa-user-gear me-1"></i> Account Settings
+                </a>
+                <a href="../login.html" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: Clients Header & Summary Metrics -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h3 class="fw-bold text-primary-blue mb-1">Registered Client Profiles</h3>
+          <p class="text-muted mb-0">Oversee guest accounts, preferred destination records, and private loyalty tiers.</p>
+        </div>
+        <div>
+          <div class="input-group input-group-sm" style="width: 260px;">
+            <span class="input-group-text bg-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" id="adminCustomerSearch" class="form-control" placeholder="Search customer...">
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Active Members</span>
+            <h4 class="fw-bold text-primary-blue mb-0">3 Verified</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">VIP Platinum</span>
+            <h4 class="fw-bold text-sunset-gold mb-0">2 Members</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Avg Trips / Member</span>
+            <h4 class="fw-bold text-success mb-0">2.6 Completed</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Account Security</span>
+            <h4 class="fw-bold text-primary-blue mb-0">100% 2FA Active</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Clients Table -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="table-responsive-wn">
+        <table class="table admin-table align-middle mb-0">
+          <thead>
+            <tr>
+              <th>Client Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Member Tier</th>
+              <th>Member Since</th>
+              <th>Completed Trips</th>
+            </tr>
+          </thead>
+          <tbody id="adminUsersTableBody">
+            <!-- Rendered by inline script / sync with StacklyData -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Customer Lifetime Value (LTV) & Client Tier Distribution -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <div>
+          <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-gem text-sunset-gold me-2"></i>VIP Client Segments & Lifetime Value Metrics</h5>
+          <small class="text-muted">High-net-worth traveler tier breakdown, repeat frequency, and retention stats.</small>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-wn"><i class="fa-solid fa-file-excel me-1"></i> Export Client Cohort</button>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Average Client LTV</span>
+            <h4 class="fw-bold text-primary-blue my-1">$28,650</h4>
+            <div class="small text-success"><i class="fa-solid fa-arrow-up me-1"></i> Top 10% average $84k</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Repeat Booking Rate</span>
+            <h4 class="fw-bold text-success my-1">78.2%</h4>
+            <div class="small text-muted">&ge; 2 departures per year</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Black Obsidian Members</span>
+            <h4 class="fw-bold text-primary-blue my-1">14 VIPs</h4>
+            <div class="small text-muted">Dedicated yacht/concierge tier</div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="small text-muted fw-bold">Annual Retention SLA</span>
+            <h4 class="fw-bold text-primary-blue my-1">98.8%</h4>
+            <div class="small text-muted">Industry-leading luxury retention</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Concierge Access Logs & KYC Document Status -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+      <div class="dashboard-card-header">
+        <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-user-shield text-primary-blue me-2"></i>Private Client KYC & Identity Verification</h5>
+        <small class="text-muted">Aviation security compliance, passport encryption checks, and dedicated concierge assignments.</small>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="badge bg-success text-white mb-2">Verified</span>
+            <h6 class="fw-bold text-primary-blue mb-1">Swetha Ramesh</h6>
+            <p class="small text-muted mb-0">Passport Z7892145X &bull; VIP Dedicated Concierge: Master Alexis Vance.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="badge bg-success text-white mb-2">Verified</span>
+            <h6 class="fw-bold text-primary-blue mb-1">Eleanor Bennett</h6>
+            <p class="small text-muted mb-0">Passport GB-994120 &bull; Private Jet Charter Cleared (NetJets Partner).</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <span class="badge bg-primary text-white mb-2">System Admin</span>
+            <h6 class="fw-bold text-primary-blue mb-1">Victoria Vance</h6>
+            <p class="small text-muted mb-0">Root Operations Key &bull; Multi-factor biometric security enabled.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Private VIP Member Invitation Portal Form -->
+    <div class="bg-white p-4 rounded-4 shadow-sm border">
+      <div class="mb-3">
+        <h5 class="text-primary-blue mb-1"><i class="fa-solid fa-envelope-open-text text-primary-blue me-2"></i>Direct VIP Member Invitation & Concierge Grant</h5>
+        <small class="text-muted">Invite high-value travelers to the Stackly Private Membership Club with introductory credits.</small>
+      </div>
+
+      <form id="vipInviteForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Prospective VIP Full Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. Swetha Ramesh" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Primary Email Address <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" placeholder="vip@luxuryclub.com" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Assigned Membership Tier <span class="text-danger">*</span></label>
+            <select class="form-select" required>
+              <option value="">Choose Tier...</option>
+              <option value="obsidian">Black Obsidian Elite (By Invitation)</option>
+              <option value="platinum" selected>Platinum Diamond Member</option>
+              <option value="gold">Gold Voyager Club</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Welcome Booking Credit ($ USD) <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" placeholder="e.g. 1000" min="250" required>
+          </div>
+          <div class="col-md-8">
+            <label class="form-label small fw-bold">Personalized Invitation Message <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" placeholder="We have the pleasure of extending private access to Stackly's luxury haven portfolio..." required>
+          </div>
+
+          <div class="col-12 mt-3">
+            <button type="submit" class="btn btn-primary-wn px-4">
+              <i class="fa-solid fa-paper-plane me-1"></i> Send VIP Access Invitation
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
+  <script src="../js/dashboard-common.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tbody = document.getElementById('adminUsersTableBody');
+      const searchInput = document.getElementById('adminCustomerSearch');
+
+      function renderUsers() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const users = StacklyData.getUsers().filter(u => {
+          return u.name.toLowerCase().includes(query) || u.email.toLowerCase().includes(query);
+        });
+
+        tbody.innerHTML = users.map(u => `
+          <tr>
+            <td>
+              <strong>${u.name}</strong>
+            </td>
+            <td>${u.email}</td>
+            <td>${u.phone || 'N/A'}</td>
+            <td>
+              <span class="badge ${u.role === 'admin' ? 'bg-primary-blue text-white' : 'bg-sunset-gold text-white'}">
+                ${u.role === 'admin' ? 'Administrator' : 'Private Member'}
+              </span>
+            </td>
+            <td>${u.joinDate || 'Jan 2025'}</td>
+            <td><span class="fw-bold text-primary-blue">${u.tripsCompleted || 0} Journeys</span></td>
+          </tr>
+        `).join('');
+      }
+
+      if (searchInput) searchInput.addEventListener('input', renderUsers);
+      renderUsers();
+    });
+  </script>
+</body>
+</html>

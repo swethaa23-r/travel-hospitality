@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Profile & Preferences — Stackly</title>
+  <meta name="description" content="Update your personal details, dietary notes, and preferred travel styles.">
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="dashboard-layout">
+
+  <!-- Customer Sidebar (Strictly Internal Navigation) -->
+  <aside class="dashboard-sidebar">
+    <div class="dashboard-brand">
+      <div class="dashboard-brand-left">
+        <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img dashboard-sidebar-logo">
+      </div>
+      <button type="button" class="dashboard-sidebar-close" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="dashboard-nav">
+      <a href="user-dashboard.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-gauge"></i> Overview
+      </a>
+      <a href="my-bookings.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-calendar-check"></i> My Bookings
+      </a>
+      <a href="wishlist.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-heart"></i> Saved Wishlist
+      </a>
+      <a href="profile.html" class="dashboard-nav-link active">
+        <i class="fa-solid fa-user-gear"></i> Profile & Settings
+      </a>
+      <a href="browse-tours.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-suitcase"></i> Browse Tours
+      </a>
+      <a href="explore-destinations.html" class="dashboard-nav-link">
+        <i class="fa-solid fa-earth-americas"></i> Explore Havens
+      </a>
+    </nav>
+
+    <div class="dashboard-nav-footer">
+      <a href="../login.html" class="dashboard-nav-link text-danger mt-1">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="dashboard-main">
+    <!-- Topbar (Mobile: Logo + 3-line Hamburger only | Desktop: Search bar + Bell + Swetha Ramesh Profile Icon with Email & Password) -->
+    <header class="dashboard-topbar">
+      <!-- Mobile View (Logo + Hamburger only) -->
+      <div class="dashboard-mobile-header d-lg-none">
+        <a href="user-dashboard.html" class="dashboard-mobile-logo">
+          <img src="../logo.webp" alt="Stackly Travel & Hospitality" class="dashboard-logo-img">
+        </a>
+        <button type="button" class="dashboard-hamburger-btn" id="dashboardSidebarToggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop View (Search + Bell + Profile Icon) -->
+      <div class="dashboard-desktop-header d-none d-lg-flex">
+        <!-- Search bar with Search Icon -->
+        <form class="dashboard-search-bar dashboard-search-form" id="dashboardSearchForm">
+          <button type="submit" class="border-0 bg-transparent p-0 text-muted" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </button>
+          <input type="text" placeholder="Search profile settings, documents, preferences...">
+        </form>
+
+        <!-- Right Side: Bell Icon + Profile -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Notification Bell Icon (Redirects to 404 on click) -->
+          <button class="dashboard-notif-btn" type="button" title="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-badge"></span>
+          </button>
+
+          <!-- Profile in Top Right Corner (Icon only, No Image, Swetha Ramesh, Email & Password display) -->
+          <div class="dropdown">
+            <button class="dashboard-header-profile dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="dashboard-avatar-icon">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="dashboard-profile-text text-start">
+                <div class="profile-name">Swetha Ramesh</div>
+                <div class="profile-email">swetha.ramesh@gmail.com</div>
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow-lg p-3 profile-dropdown-menu" style="min-width: 310px;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom">
+                <div class="dashboard-avatar-icon large">
+                  <i class="fa-solid fa-circle-user fa-2x text-primary-blue"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold profile-name">Swetha Ramesh</h6>
+                  <span class="small text-muted profile-email">swetha.ramesh@gmail.com</span>
+                </div>
+              </div>
+
+              <!-- Display Credentials (Email & Password) -->
+              <div class="mb-3 bg-light p-2 rounded border small">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-muted"><i class="fa-solid fa-envelope me-1"></i> Email ID:</span>
+                  <strong class="text-dark profile-email">swetha.ramesh@gmail.com</strong>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted"><i class="fa-solid fa-lock me-1"></i> Password:</span>
+                  <span class="badge bg-secondary-subtle text-dark border font-monospace">••••••••••••</span>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <a href="profile.html" class="btn btn-sm btn-outline-wn">
+                  <i class="fa-solid fa-user-gear me-1"></i> Account Settings
+                </a>
+                <a href="../login.html" class="btn btn-sm btn-danger">
+                  <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Sign Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mb-4">
+      <h2 class="h3 fw-bold text-primary-blue mb-1">Client Profile & Travel Preferences</h2>
+      <p class="text-muted mb-0">Manage your personal credentials, contact details, emergency documents, and security settings.</p>
+    </div>
+
+    <!-- SECTION 1 & 2: Personal Information Form & Member Card (Profile Icon, No image) -->
+    <div class="row g-4 mb-4">
+      <div class="col-lg-8">
+        <div class="dashboard-card h-100">
+          <div class="dashboard-card-header">
+            <h4 class="dashboard-card-title">Personal Information</h4>
+            <span class="badge bg-light text-dark border">Synced with LocalStorage</span>
+          </div>
+
+          <form id="userProfileForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Full Legal Name <span class="text-danger">*</span></label>
+                <input type="text" id="profileName" class="form-control" value="Swetha Ramesh" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Email Address <span class="text-danger">*</span></label>
+                <input type="email" id="profileEmail" class="form-control" value="swetha.ramesh@gmail.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Contact Phone Number <span class="text-danger">*</span></label>
+                <input type="tel" id="profilePhone" class="form-control" placeholder="+1 (555) 382-9910" value="+1 (555) 382-9910" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-bold">Preferred Destination Regions</label>
+                <input type="text" id="profilePreferences" class="form-control" placeholder="e.g. Greek Islands, Swiss Alps, Kyoto" value="Tropical Beaches, Mountain Trekking">
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-primary-wn px-4">
+                  <i class="fa-solid fa-floppy-disk me-1"></i> Save Profile Changes
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <!-- SECTION 2: Member Status with Profile Icon (NO Image) -->
+        <div class="dashboard-card text-center h-100 d-flex flex-column justify-content-center">
+          <div class="rounded-circle mb-3 mx-auto d-inline-flex align-items-center justify-content-center bg-primary-blue text-sunset-gold shadow-sm" style="width: 90px; height: 90px; font-size: 3.5rem;">
+            <i class="fa-solid fa-circle-user"></i>
+          </div>
+          <h5 class="user-display-name mb-1 profile-name fw-bold">Swetha Ramesh</h5>
+          <span class="badge bg-primary-blue text-white mb-2 mx-auto">Stackly Private Member</span>
+          <p class="small text-muted mb-0">Member Since January 2025 &bull; 3 Completed Journeys</p>
+          <div class="mt-3 p-2 bg-light rounded border text-start small">
+            <div><i class="fa-solid fa-envelope text-sunset-gold me-1"></i> <span class="profile-email">swetha.ramesh@gmail.com</span></div>
+            <div><i class="fa-solid fa-lock text-sunset-gold me-1"></i> Password: ••••••••••••</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: Emergency Contacts & Passport Security Vault -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <div>
+          <h4 class="dashboard-card-title"><i class="fa-solid fa-vault text-sunset-gold me-2"></i>Emergency Contacts & Passport Security Vault</h4>
+          <small class="text-muted">Encrypted vault for international crisis assistance and rapid consular retrieval.</small>
+        </div>
+        <span class="badge bg-success-subtle text-success px-3 py-2 fw-bold"><i class="fa-solid fa-lock me-1"></i> 256-Bit Encrypted</span>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <h6 class="fw-bold mb-3 text-primary-blue"><i class="fa-solid fa-passport me-2"></i>Primary Passport Details</h6>
+            <div class="row g-2 small">
+              <div class="col-sm-6 text-muted">Passport Document No:</div>
+              <div class="col-sm-6 fw-bold">Z7892145X (Verified)</div>
+              <div class="col-sm-6 text-muted">Issuing Nationality:</div>
+              <div class="col-sm-6 fw-bold">Republic of India</div>
+              <div class="col-sm-6 text-muted">Expiration Date:</div>
+              <div class="col-sm-6 fw-bold text-success">18 August 2032 (Active)</div>
+              <div class="col-sm-6 text-muted">Trusted Traveler ID:</div>
+              <div class="col-sm-6 fw-bold">TT-98421008</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="p-3 border rounded-3 bg-light">
+            <h6 class="fw-bold mb-3 text-primary-blue"><i class="fa-solid fa-heart-pulse me-2"></i>Designated Emergency Contact</h6>
+            <div class="row g-2 small">
+              <div class="col-sm-6 text-muted">Contact Full Name:</div>
+              <div class="col-sm-6 fw-bold">Karthik Ramesh</div>
+              <div class="col-sm-6 text-muted">Relationship:</div>
+              <div class="col-sm-6 fw-bold">Family / Spouse</div>
+              <div class="col-sm-6 text-muted">Direct Mobile Phone:</div>
+              <div class="col-sm-6 fw-bold">+91 98400 12345</div>
+              <div class="col-sm-6 text-muted">Emergency Email:</div>
+              <div class="col-sm-6 fw-bold">karthik.ramesh@example.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: Travel Inclinations & Dietary Preferences Matrix -->
+    <div class="dashboard-card mb-4">
+      <div class="dashboard-card-header">
+        <h4 class="dashboard-card-title"><i class="fa-solid fa-utensils text-primary-blue me-2"></i>Bespoke Dining & Cabin Preferences</h4>
+        <small class="text-muted">Pre-communicated to partner airlines, private yachts, and resort executive chefs.</small>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <h6 class="fw-bold text-primary-blue mb-1">Dietary Requirements</h6>
+            <p class="small text-muted mb-0">Vegetarian / Organic focus &bull; Nut-allergy safe &bull; Sparkling mineral water</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <h6 class="fw-bold text-primary-blue mb-1">Villa Bedding & Pillow Menu</h6>
+            <p class="small text-muted mb-0">Hypoallergenic goose down &bull; Silk eye masks &bull; Aromatherapy mist</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 bg-light">
+            <h6 class="fw-bold text-primary-blue mb-1">Aviation Seating Choice</h6>
+            <p class="small text-muted mb-0">Window seat / Forward cabin suite &bull; Quiet zone &bull; Chilled champagne</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: Security Credentials & Password Management Form -->
+    <div class="dashboard-card">
+      <div class="dashboard-card-header">
+        <div>
+          <h4 class="dashboard-card-title"><i class="fa-solid fa-key text-primary-blue me-2"></i>Security Credentials & Password Management</h4>
+          <small class="text-muted">Update your portal password and enable multi-factor identity authentication.</small>
+        </div>
+      </div>
+
+      <form id="securityCredentialsForm">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Current Password <span class="text-danger">*</span></label>
+            <input type="password" class="form-control" placeholder="••••••••••••" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">New Strong Password <span class="text-danger">*</span></label>
+            <input type="password" class="form-control" placeholder="Minimum 8 characters" minlength="8" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Confirm New Password <span class="text-danger">*</span></label>
+            <input type="password" class="form-control" placeholder="Re-type new password" minlength="8" required>
+          </div>
+
+          <div class="col-12 mt-3">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="twoFactorSwitch" checked>
+              <label class="form-check-label small fw-bold" for="twoFactorSwitch">Enable SMS & Email Two-Factor Authentication (2FA) for all login attempts</label>
+            </div>
+          </div>
+
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-primary-wn px-4">
+              <i class="fa-solid fa-shield-check me-1"></i> Update Security Credentials
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/user-dashboard.js"></script>
+  <script src="../js/dashboard-common.js"></script>
+</body>
+</html>
