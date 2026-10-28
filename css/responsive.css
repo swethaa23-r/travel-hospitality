@@ -97,7 +97,7 @@ body.menu-open {
   }
 
   /* Fixed Header on Mobile & Tablet */
-  header,
+  header:not(.dashboard-topbar):not(.admin-topbar),
   .wn-navbar {
     position: fixed !important;
     top: 0 !important;
@@ -123,7 +123,9 @@ body.menu-open {
   }
 
   .hero-section {
-    padding-top: calc(var(--nav-height) + 1.5rem);
+    padding-top: calc(var(--nav-height) + 3.5rem) !important;
+    padding-bottom: 3.5rem !important;
+    min-height: auto !important;
     text-align: center;
   }
 
@@ -137,7 +139,8 @@ body.menu-open {
   }
 
   .search-panel-wrapper {
-    margin-top: -2rem;
+    margin-top: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
   }
 
   .search-panel {
@@ -194,6 +197,11 @@ body.menu-open {
     font-size: 1.85rem;
   }
 
+  .page-header {
+    padding-top: calc(var(--nav-height) + 3.5rem) !important;
+    padding-bottom: 3.5rem !important;
+  }
+
   .page-header-title {
     font-size: 2.25rem;
   }
@@ -220,6 +228,17 @@ body.menu-open {
     width: 100%;
   }
 
+  .input-group {
+    flex-wrap: nowrap !important;
+  }
+
+  .input-group > .btn,
+  .input-group .btn {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
   .testimonial-card {
     padding: 1.75rem 1.25rem;
   }
@@ -232,6 +251,17 @@ body.menu-open {
   .table-responsive,
   .dashboard-table-wrapper {
     width: 100%;
+  }
+
+  .input-group {
+    flex-wrap: nowrap !important;
+  }
+
+  .input-group > .btn,
+  .input-group .btn {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: var(--radius-md);
@@ -303,8 +333,19 @@ body.menu-open {
     flex-direction: column;
   }
 
-  .btn {
+  .btn:not(.input-group .btn):not(.btn-sm-wn):not(.dashboard-hamburger-btn):not(.mobile-nav-toggle):not(.footer-social-btn):not(.wishlist-btn) {
     width: 100%;
+  }
+
+  .input-group {
+    flex-wrap: nowrap !important;
+  }
+
+  .input-group > .btn,
+  .input-group .btn {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
   }
 
   .d-flex.gap-3.flex-wrap {
@@ -327,6 +368,11 @@ body.menu-open {
 @media (max-width: 414px) {
   .hero-title {
     font-size: 1.85rem;
+  }
+
+  .page-header {
+    padding-top: calc(var(--nav-height) + 3.5rem) !important;
+    padding-bottom: 3.5rem !important;
   }
 
   .page-header-title {
@@ -400,7 +446,7 @@ body.menu-open {
     padding-right: 0.75rem;
   }
 
-  .btn {
+  .btn:not(.input-group .btn):not(.btn-sm-wn):not(.dashboard-hamburger-btn):not(.mobile-nav-toggle):not(.footer-social-btn):not(.wishlist-btn) {
     font-size: 12px;
     padding: 0.55rem 0.85rem;
   }

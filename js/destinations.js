@@ -136,7 +136,28 @@ document.addEventListener('DOMContentLoaded', () => {
       renderDestinations();
     };
 
-    if (destinationSearchInput) destinationSearchInput.addEventListener('input', renderDestinations);
+    if (destinationSearchInput) {
+      destinationSearchInput.addEventListener('input', () => {
+        currentLimit = 6;
+        renderDestinations();
+      });
+      destinationSearchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          currentLimit = 6;
+          renderDestinations();
+        }
+      });
+      const searchIcon = destinationSearchInput.closest('.input-group')?.querySelector('.input-group-text');
+      if (searchIcon) {
+        searchIcon.style.cursor = 'pointer';
+        searchIcon.title = 'Click to search';
+        searchIcon.addEventListener('click', () => {
+          currentLimit = 6;
+          renderDestinations();
+        });
+      }
+    }
     if (regionFilter) regionFilter.addEventListener('change', renderDestinations);
     if (categoryFilter) categoryFilter.addEventListener('change', renderDestinations);
     if (budgetFilter) budgetFilter.addEventListener('change', renderDestinations);

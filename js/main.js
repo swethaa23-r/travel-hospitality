@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mirror: false
     });
 
-    // Refresh triggers once images and assets load
     window.addEventListener('load', () => {
       AOS.refresh();
     });
@@ -141,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
         showWnNotification('Removed', 'Item removed from your wishlist.', 'info');
       }
 
-      // If on wishlist page, re-render
       if (typeof renderWishlistItems === 'function') {
         renderWishlistItems();
       }
@@ -200,18 +198,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero Search Form Redirection
+  // Hero Search Form Redirection & Validation
   const heroSearchForm = document.querySelector('#heroSearchForm');
   if (heroSearchForm) {
+    const destSelect = heroSearchForm.querySelector('#searchDestination');
+    const categorySelect = heroSearchForm.querySelector('#searchCategory');
+    const checkInInput = heroSearchForm.querySelector('#searchCheckIn');
+    const travelersSelect = heroSearchForm.querySelector('#searchTravelers');
+
+    function clearHeroSearchError() {
+      if (destSelect) destSelect.classList.remove('is-invalid');
+      const oldErr = heroSearchForm.querySelector('.hero-search-error');
+      if (oldErr) oldErr.remove();
+    }
+
+    if (destSelect) {
+      destSelect.addEventListener('change', clearHeroSearchError);
+    }
+    if (categorySelect) {
+      categorySelect.addEventListener('change', clearHeroSearchError);
+    }
+
     heroSearchForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const destination = heroSearchForm.querySelector('#searchDestination')?.value || '';
-      const category = heroSearchForm.querySelector('#searchCategory')?.value || '';
-      const checkIn = heroSearchForm.querySelector('#searchCheckIn')?.value || '';
-      const travelers = heroSearchForm.querySelector('#searchTravelers')?.value || '';
+      clearHeroSearchError();
 
+      const destination = destSelect?.value ? destSelect.value.trim() : '';
+      const category = categorySelect?.value ? categorySelect.value.trim() : '';
+      const checkIn = checkInInput?.value ? checkInInput.value.trim() : '';
+      const travelers = travelersSelect?.value ? travelersSelect.value.trim() : '';
+
+      // Validation: Destination must be selected
+      if (!destination) {
+        if (destSelect) {
+          destSelect.classList.add('is-invalid');
+          destSelect.focus();
+
+          const errDiv = document.createElement('div');
+          errDiv.className = 'hero-search-error text-danger small mt-2 w-100 text-start fw-semibold';
+          errDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation me-1"></i>Please select a destination from the list.';
+          destSelect.parentNode.appendChild(errDiv);
+
+          destSelect.classList.add('animate-shake');
+          setTimeout(() => destSelect.classList.remove('animate-shake'), 600);
+        }
+
+        showWnNotification('Destination Required', 'Please select a destination from the list to search curated experiences.', 'warning');
+        return false;
+      }
+
+      // Valid: Navigate to packages with query params
       const queryParams = new URLSearchParams();
-      if (destination) queryParams.set('dest', destination);
+      queryParams.set('dest', destination);
       if (category) queryParams.set('cat', category);
       if (checkIn) queryParams.set('date', checkIn);
       if (travelers) queryParams.set('travelers', travelers);
@@ -434,6 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Leadership Social Overlay Handling
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.leadership-img-wrapper')) {
       document.querySelectorAll('.leadership-img-wrapper').forEach(w => {
@@ -491,7 +530,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     testimonialsScroll.addEventListener('mousemove', (e) => {
       if (!isDown) return;
-      e.preventDefault();
       const x = e.pageX - testimonialsScroll.offsetLeft;
       const walk = (x - startX) * 1.5;
       testimonialsScroll.scrollLeft = scrollLeft - walk;
@@ -569,5 +607,44 @@ document.addEventListener('DOMContentLoaded', () => {
       processSequenceWrapper.classList.add('in-view');
     }
   }
+
+  // Mobile Navigation Drawer Toggle & Close Handlers
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const mobileDrawer = document.querySelector('.mobile-nav-drawer');
+  const mobileOverlay = document.querySelector('.mobile-drawer-overlay');
+  const mobileDrawerClose = document.querySelector('.mobile-drawer-close');
+
+  function openMobileDrawer() {
+    if (mobileDrawer) mobileDrawer.classList.add('active');
+    if (mobileOverlay) mobileOverlay.classList.add('active');
+    document.body.classList.add('menu-open');
+    if (mobileNavToggle) mobileNavToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMobileDrawer() {
+    if (mobileDrawer) mobileDrawer.classList.remove('active');
+    if (mobileOverlay) mobileOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    if (mobileNavToggle) mobileNavToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openMobileDrawer();
+    });
+  }
+
+  if (mobileDrawerClose) {
+    mobileDrawerClose.addEventListener('click', closeMobileDrawer);
+  }
+
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', closeMobileDrawer);
+  }
+
+  document.querySelectorAll('.mobile-drawer-link').forEach(link => {
+    link.addEventListener('click', closeMobileDrawer);
+  });
 
 });

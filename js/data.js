@@ -432,6 +432,81 @@ const DEFAULT_PACKAGES = [
       { day: 6, title: 'Kumarakom Luxury Resort & Ayurvedic Massage', desc: 'Disembark at luxury lakeside resort, rejuvenating 90-minute Ayurvedic Abhyanga massage, sunset cultural Kathakali performance.' },
       { day: 7, title: 'Kumarakom Bird Sanctuary & Departure', desc: 'Morning bird watching by boat, final tropical breakfast, and transfer to Kochi Airport.' }
     ]
+  },
+  {
+    id: 'pkg-amalfi-riviera',
+    title: 'Amalfi Coast Dolce Vita & Capri Private Cruise',
+    destinationId: 'dest-amalfi',
+    destinationName: 'Amalfi Coast, Italy',
+    category: 'Luxury Travel',
+    duration: '6 Days / 5 Nights',
+    durationDays: 6,
+    groupSize: 'Max 8 Travelers',
+    price: 2190,
+    originalPrice: 2500,
+    rating: 4.94,
+    reviewsCount: 168,
+    badge: 'Coastal Glamour',
+    image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=80',
+    overview: 'Bask in timeless Italian glamour across Positano, Ravello, and a private Riva boat charter circling the legendary Faraglioni rocks of Capri.',
+    included: [
+      '5 Nights in a 5-star clifftop boutique hotel in Positano',
+      'Daily Mediterranean champagne breakfast & 3 Michelin-starred dinners',
+      'Private full-day vintage Riva boat cruise to Capri with skipper and prosecco',
+      'Private Mercedes chauffeur along the Amalfi coastal drive',
+      'Exclusive Limoncello and organic olive oil grove masterclass'
+    ],
+    excluded: [
+      'Flights to Naples (NAP) International Airport',
+      'Personal boutique shopping and gratuities'
+    ],
+    hotelDetails: 'Le Sirenuse Positano & Hotel Santa Caterina Amalfi.',
+    itinerary: [
+      { day: 1, title: 'Naples Arrival & Scenic Drive to Positano', desc: 'VIP chauffeur greeting at Naples, panoramic drive along the cliff roads, sunset cocktail on private balcony overlooking Positano.' },
+      { day: 2, title: 'Private Capri Yacht Charter & Blue Grotto', desc: 'Board your private handcrafted Riva speed boat, cruise to Capri, swim in turquoise sea caves, and lunch in Anacapri.' },
+      { day: 3, title: 'Ravello Gardens & Classical Concert', desc: 'Ascend to hill-crest Ravello, visit Villa Cimbrone infinity terrace, and attend an open-air classical music recital.' },
+      { day: 4, title: 'Path of the Gods Guided Panoramic Hike', desc: 'Hike the cliff-edge Path of the Gods trail facing the Mediterranean, followed by rustic farmhouse wine and burrata tasting.' },
+      { day: 5, title: 'Amalfi Cathedral & Sunset Gala Dinner', desc: 'Explore historic Amalfi Maritime Republic, visit paper-making workshops, and farewell candlelit cliffside seafood banquet.' },
+      { day: 6, title: 'Artisanal Ceramic Shopping & Departure', desc: 'Morning espresso in Positano piazza, pick up Vietri ceramic souvenirs, and private transfer to Naples Airport.' }
+    ]
+  },
+  {
+    id: 'pkg-serengeti-safari',
+    title: 'Serengeti Great Migration & Luxury Bush Camp',
+    destinationId: 'dest-serengeti',
+    destinationName: 'Serengeti, Tanzania',
+    category: 'Adventure',
+    duration: '7 Days / 6 Nights',
+    durationDays: 7,
+    groupSize: 'Max 6 / Private 4x4',
+    price: 3450,
+    originalPrice: 3950,
+    rating: 4.97,
+    reviewsCount: 195,
+    badge: 'Safari Masterpiece',
+    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80',
+    overview: 'Witness nature’s greatest terrestrial spectacle with privileged access to the Great Wildebeest Migration, the Ngorongoro Crater, and luxury tented camps.',
+    included: [
+      '6 Nights in ultra-luxury solar-powered mobile tented bush camps',
+      'All-inclusive gourmet bush cuisine, sundowner cocktails, and vintage wines',
+      'Private 4x4 customized safari vehicle with pop-up photography roof',
+      'Certified Senior Naturalist Guide & Maasai Tracker',
+      'Sunrise Hot Air Balloon safari across the savannah with champagne breakfast'
+    ],
+    excluded: [
+      'International flights to Kilimanjaro (JRO)',
+      'Tanzania tourist entry visa and yellow fever vaccination'
+    ],
+    hotelDetails: 'Four Seasons Safari Lodge Serengeti & Singita Mara River Tented Camp.',
+    itinerary: [
+      { day: 1, title: 'Kilimanjaro Arrival & Bush Plane to Serengeti', desc: 'Fly in light aircraft directly into Seronera airstrip, greet your personal tracker, and evening sundowners under acacia trees.' },
+      { day: 2, title: 'Full Day Predator Tracking in Central Serengeti', desc: 'Sunrise game drive tracking lion prides, leopards in sausage trees, and cheetahs hunting across the open plains.' },
+      { day: 3, title: 'Sunrise Hot Air Balloon Safari & Mara River', desc: 'Glide silently over herds at dawn in a hot air balloon; land for a white-linen bush champagne breakfast.' },
+      { day: 4, title: 'Great Migration River Crossing Witness', desc: 'Full-day vigil along the Mara River to witness thousands of wildebeest and zebras braving the waters.' },
+      { day: 5, title: 'Transfer to Ngorongoro Conservation Area', desc: 'Scenic drive past Maasai bomas to the rim of Ngorongoro Crater; settle into luxury crater-edge lodge with hearth fires.' },
+      { day: 6, title: 'Ngorongoro Crater Floor Big Five Expedition', desc: 'Descend 600m into the volcanic caldera to observe black rhinos, flamingos, and massive elephant bulls.' },
+      { day: 7, title: 'Arusha Cultural Center & Outbound Flight', desc: 'Morning visit to Arusha cultural heritage center, artisanal tanzanite gallery, and transfer to Kilimanjaro Airport.' }
+    ]
   }
 ];
 
@@ -816,7 +891,8 @@ const StacklyData = {
     if (!localStorage.getItem(STACKLY_STORAGE_KEYS.DESTINATIONS)) {
       localStorage.setItem(STACKLY_STORAGE_KEYS.DESTINATIONS, JSON.stringify(DEFAULT_DESTINATIONS));
     }
-    if (!localStorage.getItem(STACKLY_STORAGE_KEYS.PACKAGES)) {
+    const storedPkgs = localStorage.getItem(STACKLY_STORAGE_KEYS.PACKAGES);
+    if (!storedPkgs || JSON.parse(storedPkgs).length < DEFAULT_PACKAGES.length) {
       localStorage.setItem(STACKLY_STORAGE_KEYS.PACKAGES, JSON.stringify(DEFAULT_PACKAGES));
     }
     if (!localStorage.getItem(STACKLY_STORAGE_KEYS.HOTELS)) {

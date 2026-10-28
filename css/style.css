@@ -52,6 +52,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 1.5rem);
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }
@@ -1667,4 +1668,38 @@ body.menu-open {
   pointer-events: none;
   background: rgba(18, 59, 82, 0.04);
   border-color: rgba(18, 59, 82, 0.08);
+}
+
+/* ----------------- Universal Form Input-Group Alignments ----------------- */
+.input-group {
+  flex-wrap: nowrap !important;
+}
+
+.input-group > .btn,
+.input-group .btn {
+  width: auto !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Search Validation & Shake Animation */
+@keyframes fieldShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: fieldShake 0.45s ease-in-out;
+}
+
+.hero-search-error {
+  animation: fadeIn 0.3s ease;
+  font-size: 0.825rem;
+}
+
+#searchDestination.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
 }

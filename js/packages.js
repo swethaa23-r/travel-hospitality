@@ -140,7 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
       renderPackages();
     };
 
-    if (packageSearch) packageSearch.addEventListener('input', renderPackages);
+    if (packageSearch) {
+      packageSearch.addEventListener('input', renderPackages);
+      packageSearch.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          renderPackages();
+        }
+      });
+      const searchIcon = packageSearch.closest('.input-group')?.querySelector('.input-group-text');
+      if (searchIcon) {
+        searchIcon.style.cursor = 'pointer';
+        searchIcon.title = 'Click to search';
+        searchIcon.addEventListener('click', renderPackages);
+      }
+    }
     if (pkgCategoryFilter) pkgCategoryFilter.addEventListener('change', renderPackages);
     if (pkgDurationFilter) pkgDurationFilter.addEventListener('change', renderPackages);
     if (pkgBudgetFilter) pkgBudgetFilter.addEventListener('change', renderPackages);
