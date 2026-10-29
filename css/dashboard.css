@@ -108,7 +108,15 @@
   margin-left: 280px;
   padding: 2rem 2.5rem;
   min-height: 100vh;
+  min-width: 0;
   transition: margin-left 0.35s ease;
+}
+
+.table-responsive-wn,
+.dashboard-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ==========================================================================
@@ -331,7 +339,7 @@
   inset: 0;
   background-color: rgba(18, 59, 82, 0.6);
   backdrop-filter: blur(3px);
-  z-index: 1040;
+  z-index: 1055;
   transition: opacity 0.3s ease;
 }
 
@@ -467,9 +475,11 @@
   .dashboard-sidebar {
     transform: translateX(-100%);
     box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+    z-index: 1060;
   }
   .dashboard-sidebar.active {
     transform: translateX(0);
+    z-index: 1060;
   }
   .dashboard-sidebar-close {
     display: block;

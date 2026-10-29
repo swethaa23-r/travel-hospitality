@@ -194,9 +194,11 @@
   .admin-sidebar {
     transform: translateX(-100%);
     box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
+    z-index: 1060;
   }
   .admin-sidebar.active {
     transform: translateX(0);
+    z-index: 1060;
   }
   .admin-sidebar-close {
     display: block;
@@ -204,5 +206,6 @@
   .admin-main {
     margin-left: 0;
     padding: 1.25rem;
+    min-width: 0;
   }
 }

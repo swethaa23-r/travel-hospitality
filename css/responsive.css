@@ -164,15 +164,21 @@ body.menu-open {
   .admin-sidebar {
     position: fixed;
     top: 0;
-    left: -290px;
+    left: 0;
+    transform: translateX(-100%);
     height: 100%;
-    z-index: 1045;
-    transition: left 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1060 !important;
+    transition: transform 0.35s ease;
   }
 
   .dashboard-sidebar.active,
   .admin-sidebar.active {
-    left: 0;
+    transform: translateX(0);
+    z-index: 1060 !important;
+  }
+
+  .dashboard-sidebar-overlay {
+    z-index: 1055 !important;
   }
 
   .dashboard-main,
@@ -251,6 +257,8 @@ body.menu-open {
   .table-responsive,
   .dashboard-table-wrapper {
     width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .input-group {
@@ -262,8 +270,6 @@ body.menu-open {
     width: auto !important;
     flex-shrink: 0 !important;
     white-space: nowrap !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
   }
